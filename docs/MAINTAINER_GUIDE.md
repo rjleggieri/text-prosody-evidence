@@ -1,9 +1,22 @@
-# Maintainer guide: what this project is and why it stopped where it did
+# Maintainer guide: what this project is and why the rebuild stopped where it did
 
 This guide is for the researcher maintaining `text-prosody-evidence`. It explains the research
 story, the software, and the limits of the evidence without assuming research-software expertise.
 The shorter public claim boundary remains authoritative in
 [evidence_boundaries.md](evidence_boundaries.md).
+
+## If you remember only five things
+
+1. The original research question asked whether text-derived and speech-derived affect disagree in
+   DAIC-WOZ interviews and whether that model-based disagreement is associated with PHQ-8.
+2. The legacy school project did run DAIC/PHQ analyses and produced historical results. Those
+   results are privately preserved, quarantined, and not publication evidence.
+3. The rebuild found that subtracting two model outputs is not automatically a valid measurement.
+   The required paired human validation and common empirical scale are currently unavailable.
+4. The public software implements evaluation safeguards and verifies them synthetically. It does
+   not validate a real text–speech discrepancy construct.
+5. The current publication target is the methods/software and evidence framework. Any new DAIC or
+   PHQ work in the rebuilt publication pipeline remains conditional future research.
 
 ## The research question that started the project
 
@@ -16,9 +29,15 @@ The intended workflow was roughly: estimate valence and arousal from transcript 
 same dimensions from speech, compare the two estimates, and then explore whether that comparison is
 associated with PHQ-8. The DAIC/PHQ part was meant to be exploratory, not a diagnostic system.
 
-That question is still scientifically interesting. It is not answered by this repository. The
-project stopped before DAIC affect extraction or PHQ analysis because the proposed comparison was
-not yet a validated measurement.
+The legacy school project did run DAIC/PHQ analyses and produced historical results. Those results
+are privately preserved and quarantined because they are not publication evidence. They are not
+included in this public repository and are not used to support its claims.
+
+The rebuilt publication pipeline started from the same broad question but required stronger
+measurement validation. It stopped before running any **new** DAIC affect extraction, PHQ
+association, prediction, threshold selection, or clinical modeling because the proposed comparison
+was not yet a validated measurement. The original question remains scientifically interesting, but
+this public repository does not answer it.
 
 ## Why subtraction became a measurement problem
 
@@ -59,8 +78,13 @@ UniC was investigated because its research description discussed separate text, 
 and multimodal conditions. On paper, that made it a plausible candidate for evaluating the exact
 paired quantity rather than merely evaluating two components on unrelated datasets.
 
+The findings came from a private, privacy-safe aggregate audit of the gated release. Restricted
+payloads and item-level information are not public. The public repository records the aggregate
+determination and its scientific consequence, but it does not make the gated audit independently
+reproducible for readers without authorized access to the same release.
+
 The investigation was a schema and feasibility audit, not a model benchmark. No UniC affect-model
-inference, calibration, candidate selection, or discrepancy evaluation was run.
+inference, calibration, candidate selection, or discrepancy evaluation was run during that audit.
 
 ## Why the audited UniC release failed the evidence contract
 
@@ -88,10 +112,11 @@ The result was
 specific paired dimensional benchmark. The preferred paired-validation design was preserved as an
 auditable abandoned branch rather than rewritten after seeing what the release contained.
 
-## Why DAIC/PHQ modeling was stopped
+## Why DAIC/PHQ modeling was stopped in the rebuilt pipeline
 
-DAIC and PHQ modeling stopped for scientific reasons, not because the Python pipeline was
-impossible to run.
+The legacy school project had already run DAIC/PHQ analyses. The rebuild did not treat those
+historical results as publication evidence. Instead, it stopped before running any new DAIC/PHQ
+analysis for scientific reasons, not because the Python pipeline was impossible to run.
 
 - The text and audio outputs had not been shown to share a common empirical scale.
 - The audio component had no executed independent human-reference benchmark.
@@ -100,9 +125,11 @@ impossible to run.
 - Continuing data authorization and governance must be confirmed separately whenever a future
   DAIC phase is proposed.
 
-The current decision is therefore: no DAIC affect extraction, PHQ association, prediction,
-threshold selection, or clinical classification. A later researcher decision cannot create the
-missing scientific evidence by itself.
+The current decision is therefore: no **new** DAIC affect extraction, PHQ association, prediction,
+threshold selection, or clinical classification in the rebuilt publication workflow. A later
+researcher decision cannot create the missing scientific evidence by itself. The quarantined
+legacy analyses remain historical context, not an exception that authorizes reuse as publication
+evidence.
 
 ## Keep the five project states separate
 
@@ -111,7 +138,7 @@ missing scientific evidence by itself.
 | Implemented software behavior | Code does what a testable contract says it should do. | Related source items are kept in one fold. |
 | Synthetic verification | The implementation succeeds and fails appropriately on invented data with known structure. | The CLI runs grouped calibration and suppresses invalid intervals on synthetic fixtures. |
 | Real empirical evidence | A real human-reference evaluation was actually run and its limitations are reported. | The bounded historical EmoBank text-component results. |
-| Proposed future research | A scientifically conditional path that has not been executed or authorized by this guide. | Reconnecting externally frozen components to exploratory DAIC/PHQ analysis. |
+| Proposed future research | A scientifically conditional path that has not been executed in the rebuilt workflow or authorized by this guide. | Reconnecting externally frozen components to a new exploratory DAIC/PHQ analysis. |
 | Abandoned research branch | A documented design that was stopped because its activation condition failed. | Using the exact audited UniC release as the paired dimensional benchmark. |
 
 Moving from one row to another requires new evidence. A software test does not become an empirical
@@ -187,7 +214,7 @@ open. Nothing in this repository predicts or guarantees JOSS submission or accep
 
 | Component | Plain-English purpose | Current evidence status |
 |---|---|---|
-| `contracts` | Small shared errors and train/test leakage checks. | Implemented and tested. |
+| `contracts` | Provides shared validation rules and error types, including checks that prohibited identifiers or groups do not overlap between training and held-out data. | Implemented and tested. |
 | `external_benchmark` | Defines the paired human-reference schema and builds transitive leakage components. | Implemented and tested with synthetic fixtures. |
 | `calibration` | Maps model valence/arousal onto a declared human scale using primary and sensitivity mappings. | Implemented; no real cross-modal calibration is scientifically frozen. |
 | `external_evaluation` | Runs grouped held-out evaluation, nested candidate selection, feasibility reports, sensitivities, and bootstrap comparisons. | Implemented and tested synthetically. |
@@ -353,8 +380,9 @@ This is proposed future research, not an authorized or active analysis.
 7. Analyze PHQ association as exploratory and conditional, with no diagnostic or internal-state
    claim.
 
-If step 1 never becomes possible, the software paper remains separate and DAIC/PHQ modeling should
-remain stopped.
+If step 1 never becomes possible, the software paper remains separate and new DAIC/PHQ modeling in
+the rebuilt publication workflow should remain stopped. The quarantined legacy results do not fill
+that evidence gap.
 
 ## The maintainer's personal responsibilities
 
@@ -372,7 +400,7 @@ The maintainer is responsible for understanding and approving:
 - whether manuscript and README claims match the evidence actually produced;
 - privacy-safe handling of restricted data, predictions, parameters, identifiers, and artifacts;
 - authorship, AI-assistance disclosure, citations, releases, issue responses, and maintenance; and
-- any future decision to reactivate DAIC or PHQ work.
+- any future decision to reactivate DAIC or PHQ work in the rebuilt publication pipeline.
 
 Automated tests can help enforce a decision after it is made. They cannot decide whether the
 scientific question, license, ethics, or claim is appropriate.
@@ -380,9 +408,11 @@ scientific question, license, ethics, or claim is appropriate.
 ## Five-minute explanation for another graduate student
 
 “I originally wanted to compare affect estimated from DAIC transcript text with affect estimated
-from speech and then explore whether that difference related to PHQ-8. The hard part was not the
-subtraction. The two models may use different scales and may make correlated errors, so their
-difference is not automatically a valid measurement.
+from speech and then explore whether that difference related to PHQ-8. The legacy school project
+did run DAIC/PHQ analyses, but those historical results are privately quarantined and are not
+publication evidence. The rebuild therefore returned to the measurement question. The hard part
+was not the subtraction: the two models may use different scales and may make correlated errors, so
+their difference is not automatically a valid measurement.
 
 “I looked for a benchmark with the same items rated by humans in text-only and audio-only
 conditions for both valence and arousal. UniC looked promising from its description, but the exact
@@ -390,10 +420,11 @@ release I audited contained aligned multimodal representations without the requi
 dimensional human targets, scale, rater, or leakage-grouping fields. I did not reinterpret sentiment
 labels or features as the missing annotations.
 
-“So I stopped DAIC and PHQ modeling. The public project is now research software that encodes the
-evaluation safeguards we would need if a suitable benchmark becomes available: strict schema
-checks, connected grouping to prevent leakage, nested held-out evaluation, dimension-preserving
-calibration, reliability interfaces, guarded bootstraps, and hashed evidence manifests.
+“So the rebuilt pipeline stopped before running any new DAIC affect extraction or PHQ analysis.
+The public project is now research software that encodes the evaluation safeguards we would need
+if a suitable benchmark becomes available: strict schema checks, connected grouping to prevent
+leakage, nested held-out evaluation, dimension-preserving calibration, reliability interfaces,
+guarded bootstraps, and hashed evidence manifests.
 
 “The text side has bounded historical EmoBank evidence. The audio side has runtime verification
 only. The complete cross-modal pipeline works on deterministic synthetic fixtures, which proves
@@ -419,6 +450,12 @@ immutable evidence verification.
 The text component has bounded historical EmoBank evidence. Audio validity and the real cross-modal
 quantity remain unvalidated. The repository states this as a limitation rather than substituting
 synthetic results.
+
+### Did the project ever run DAIC or PHQ analyses?
+
+Yes. The legacy school project ran historical DAIC/PHQ analyses, but those results are privately
+quarantined and are not publication evidence. No new DAIC affect extraction or PHQ analysis has
+been run in the rebuilt publication workflow.
 
 ### Why include a synthetic demonstration?
 
@@ -473,7 +510,11 @@ Do not say that:
 - UniC in general lacks dimensional annotations; the conclusion is limited to the exact audited
   release;
 - categorical sentiment or supplied features are equivalent to paired human valence/arousal;
-- DAIC or PHQ analyses have been run, authorized by this package, or scientifically frozen;
+- no DAIC/PHQ analysis ever occurred; the legacy school analyses did occur but are quarantined;
+- the quarantined legacy DAIC/PHQ results are publication evidence;
+- the rebuilt publication workflow has run new DAIC affect extraction, PHQ association,
+  prediction, threshold selection, or clinical modeling;
+- this package authorizes or scientifically freezes any DAIC or PHQ analysis;
 - “recorded once” is cryptographic proof that a test partition was never accessed elsewhere;
 - a mathematically feasible fold count is scientific approval; or
 - JOSS submission, review, or acceptance is likely, promised, or guaranteed.
