@@ -1,0 +1,28 @@
+name: Feature request
+description: Propose a scoped software or documentation improvement.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: Problem or need
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence
+    attributes:
+      label: Evidence impact
+      options:
+        - Implementation only
+        - Synthetic verification
+        - Scientific default or claim boundary
+        - Documentation only
+    validations:
+      required: true

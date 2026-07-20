@@ -1,0 +1,42 @@
+schema_version: 1
+status: LOCKED_BEFORE_MODEL_DOWNLOAD
+locked_at_utc: 2026-07-19T15:02:52Z
+phase: public_component_benchmarking
+scientific_status: TECHNICAL_SMOKE_TEST_ONLY
+outcome_boundary:
+  daic_data_allowed: false
+  daic_outcomes_allowed: false
+
+model:
+  id: audeering/wav2vec2-large-robust-12-ft-emotion-msp-dim
+  revision: 6eba34a2485ea31cb03600241787c3a5edab8626
+  license: CC-BY-NC-SA-4.0
+  source_dataset: MSP-Podcast-v1.7
+  input_sampling_rate_hz: 16000
+  raw_output_order: [arousal, dominance, valence]
+
+fixtures:
+  provenance: locally_generated_unrestricted_signals
+  seed: 20260719
+  standard_duration_sec: 1.0
+  sine_frequency_hz: 220.0
+  sine_amplitude: 0.1
+  noise_standard_deviation: 0.03
+  silence_amplitude: 0.0
+  very_short_duration_sec: 0.01
+
+checks:
+  - processor_and_model_load
+  - immutable_revision
+  - sampling_rate_guard
+  - output_order_shape_and_finiteness
+  - single_item_requested_batch_equivalence
+  - cpu_and_cuda_behavior_if_available
+  - peak_memory_and_runtime
+  - checkpoint_resume
+  - silence_and_very_short_observation
+
+interpretation:
+  scientific_validation: false
+  quality_threshold_selection: prohibited
+  persist_weights_in_source_checkpoint: false

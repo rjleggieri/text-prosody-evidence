@@ -1,0 +1,26 @@
+name: Public empirical demonstration proposal
+description: Propose a redistributable, license-compatible empirical demonstration.
+title: "[Empirical demo]: "
+labels: [research, evidence]
+body:
+  - type: textarea
+    id: source
+    attributes:
+      label: Public source and exact version
+      description: Link authoritative documentation and state redistribution terms.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Human references and grouping
+      description: Describe annotations, scale, raters, reliability, and leakage grouping metadata.
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Claim boundary
+      description: Explain what the demonstration would and would not support.
+    validations:
+      required: true

@@ -1,0 +1,94 @@
+schema_version: 1
+status: LOCKED_BEFORE_DOWNLOAD
+locked_at_utc: 2026-07-19T15:02:52Z
+phase: public_component_benchmarking
+outcome_boundary:
+  daic_data_allowed: false
+  daic_outcomes_allowed: false
+  prohibited_tokens: [phq, depress, diagnos, outcome]
+
+dataset:
+  id: JULIELab/EmoBank
+  official_repository: https://github.com/JULIELab/EmoBank
+  release: v1.4
+  release_commit_prefix: 3ca77cf
+  license: CC-BY-SA-4.0
+  source_files:
+    text: corpus/raw.csv
+    reader_ratings: corpus/reader.csv
+    published_split: corpus/emobank.csv
+    metadata: corpus/meta.tsv
+  annotation_perspective: reader
+  targets: [valence, arousal]
+  expected_scale: [1.0, 5.0]
+  split_column: split
+  split_values:
+    train: train
+    development: dev
+    test: test
+  join_key: id
+  normalized_column_map:
+    item_id: id
+    text: text
+    valence: V
+    arousal: A
+    split: split
+  grouping:
+    bootstrap_priority: [metadata_source, documented_item_id_source_prefix]
+    fallback: item_id
+    rule_must_be_verified_before_test: true
+
+selection:
+  development_objective: mean_valence_arousal_rmse
+  tie_breaker: listed_order
+  test_access: once_after_all_development_choices_are_frozen
+  final_daic_model_selection_from_test_alone: prohibited
+
+candidates:
+  - name: training_mean
+    type: training_split_mean
+    hyperparameters: {}
+  - name: tfidf_ridge
+    type: tfidf_ridge_two_target
+    fixed:
+      lowercase: true
+      ngram_range: [1, 2]
+      min_df: 1
+      max_features: 20000
+    development_grid:
+      alpha: [1.0, 10.0, 100.0]
+  - name: roberta_base_va
+    type: roberta_sequence_regression_two_target
+    base_model_id: FacebookAI/roberta-base
+    base_model_revision: e2da8e2f811d1448a5b465c236feacd80ffbac7b
+    base_model_license: MIT
+    fixed:
+      max_length: 128
+      train_batch_size: 32
+      eval_batch_size: 64
+      gradient_accumulation_steps: 1
+      max_epochs: 10
+      early_stopping_patience: 2
+      early_stopping_min_delta: 0.0001
+      optimizer: AdamW
+      weight_decay: 0.01
+      warmup_ratio: 0.1
+      gradient_clip_norm: 1.0
+      loss: mean_squared_error_over_valence_and_arousal
+      mixed_precision_on_cuda: true
+    development_grid:
+      learning_rate: [1.0e-5, 2.0e-5]
+
+reporting:
+  metrics: [mae, rmse, pearson, spearman, ccc, calibration_intercept, calibration_slope]
+  bootstrap_replicates: 2000
+  bootstrap_confidence_level: 0.95
+  random_seed: 20260719
+  persist_item_predictions: local_ignored_directory_only
+  result_status: BOUNDED_PUBLIC_TEXT_COMPONENT_EVIDENCE
+
+resources:
+  maximum_single_job_hours: 2
+  maximum_public_download_gb: 5
+  preferred_device: cuda
+  fallback_device: cpu

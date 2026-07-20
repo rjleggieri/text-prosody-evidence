@@ -1,0 +1,28 @@
+name: Bug report
+description: Report reproducible software behavior using public or synthetic inputs.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not attach private data, credentials, raw media, or real item-level outputs."
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Observed behavior
+      description: Include the exact error and a minimal synthetic reproduction.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version, operating system, and package version.
+    validations:
+      required: true

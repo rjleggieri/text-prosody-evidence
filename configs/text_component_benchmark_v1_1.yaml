@@ -1,0 +1,18 @@
+schema_version: 1.1
+status: LOCKED_RUNTIME_AMENDMENT_BEFORE_TEST
+locked_at_utc: 2026-07-19T16:38:07Z
+extends: text_component_benchmark_v1.yaml
+base_config_sha256: 012c25bb6376720974ea4b82557dfd3cfd4ef99f837a51a36bdcb7f27fae9901
+amendment:
+  path: candidates.roberta_base_va.fixed.mixed_precision_dtype
+  value: bfloat16
+  reason: >
+    The first development-only run produced a PyTorch warning that FP16 gradient scaling skipped
+    an optimizer step while the scheduler advanced. The run was stopped before test evaluation.
+invariants:
+  candidate_architectures_changed: false
+  development_grid_changed: false
+  selection_objective_changed: false
+  split_changed: false
+  test_accessed_before_amendment: false
+  daic_data_or_outcomes_used: false

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and usage questions
+    url: https://github.com/rjleggieri/text-prosody-evidence/discussions
+    about: Ask public, non-sensitive installation and usage questions.
+  - name: Private security report
+    url: https://github.com/rjleggieri/text-prosody-evidence/security/advisories/new
+    about: Report vulnerabilities or privacy issues without exposing sensitive details.

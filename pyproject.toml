@@ -1,0 +1,82 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "text-prosody-evidence"
+version = "0.1.0a1"
+description = "Evidence-aware reference methods for text and speech affect components"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Robert Leggieri"}]
+keywords = ["affective-computing", "evaluation", "prosody", "reproducibility"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.1,<4",
+  "scikit-learn>=1.4,<2",
+  "scipy>=1.11,<2",
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.10,<3",
+  "pandas-stubs>=2.1",
+  "pytest>=8,<10",
+  "ruff>=0.11,<1",
+  "types-PyYAML>=6",
+]
+benchmark = [
+  "joblib>=1.3,<2",
+  "soundfile>=0.12,<1",
+  "torch>=2.2,<3",
+  "transformers>=4.40,<6",
+]
+
+[project.urls]
+Homepage = "https://github.com/rjleggieri/text-prosody-evidence"
+Issues = "https://github.com/rjleggieri/text-prosody-evidence/issues"
+Documentation = "https://github.com/rjleggieri/text-prosody-evidence/tree/main/docs"
+
+[project.scripts]
+text-prosody-evidence = "text_prosody.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/text_prosody"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.12"
+packages = ["text_prosody"]
+strict = true
+warn_unreachable = true
+follow_imports = "skip"
+warn_return_any = false
+disallow_subclassing_any = false
+
+[[tool.mypy.overrides]]
+module = ["scipy.*", "sklearn.*", "torch.*", "transformers.*"]
+ignore_missing_imports = true

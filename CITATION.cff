@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "text-prosody-evidence: evidence-aware reference methods for affect components"
+type: software
+version: 0.1.0-alpha.1
+date-released: 2026-07-20
+authors:
+  - family-names: Leggieri
+    given-names: Robert
+repository-code: "https://github.com/rjleggieri/text-prosody-evidence"
+url: "https://github.com/rjleggieri/text-prosody-evidence"
+license: MIT
+keywords:
+  - affective computing
+  - evaluation
+  - prosody
+  - reproducibility
+abstract: >-
+  An alpha-stage reference implementation for leakage-aware component evaluation,
+  calibration diagnostics, reliability reporting, and synthetic verification of a
+  model-based text-speech affect discrepancy pipeline.
