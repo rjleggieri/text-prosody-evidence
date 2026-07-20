@@ -2,14 +2,14 @@ from pathlib import Path
 
 import pytest
 
-from scripts.run_emobank_component_benchmark import set_seed
+from text_prosody.reproducibility import set_deterministic_seed
 
 
 def test_torch_seed_and_deterministic_settings_are_reproducible() -> None:
     torch = pytest.importorskip("torch")
-    set_seed(17)
+    set_deterministic_seed(17)
     first = torch.rand(5)
-    set_seed(17)
+    set_deterministic_seed(17)
     second = torch.rand(5)
     torch.testing.assert_close(first, second)
     assert torch.are_deterministic_algorithms_enabled()

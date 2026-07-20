@@ -6,7 +6,6 @@ import argparse
 import json
 import os
 import platform
-import random
 import subprocess
 import sys
 import time
@@ -30,6 +29,7 @@ from text_prosody.component_benchmark import (
     sha256_file,
     verify_test_predictions_once,
 )
+from text_prosody.reproducibility import set_deterministic_seed
 from text_prosody.test_access import record_test_access
 from text_prosody.text_affect import MeanTextVaBaseline, TfidfRidgeTextRegressor
 
@@ -87,18 +87,8 @@ def git_revision(repository: Path) -> str:
 
 
 def set_seed(seed: int) -> None:
-    os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
-    random.seed(seed)
-    np.random.seed(seed)
-    import torch
-
-    torch.manual_seed(seed)
-    torch.use_deterministic_algorithms(True, warn_only=True)
-    if hasattr(torch.backends, "cudnn"):
-        torch.backends.cudnn.deterministic = True
-        torch.backends.cudnn.benchmark = False
-    if torch.cuda.is_available():
-        torch.cuda.manual_seed_all(seed)
+    """Backward-compatible script wrapper around the package reproducibility contract."""
+    set_deterministic_seed(seed)
 
 
 def tensor_dataset(frame: pd.DataFrame, tokenizer: Any, max_length: int) -> Any:

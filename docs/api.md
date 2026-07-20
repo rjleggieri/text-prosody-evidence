@@ -36,6 +36,8 @@ and human noise ceilings are unavailable rather than estimating them from model 
 `text_prosody.evidence_bundle` verifies a declared artifact set and hashes without fabricating or
 regenerating missing evidence. `text_prosody.test_access` is an append-only, non-overwriting access
 ledger. `text_prosody.provenance` provides canonical JSON and SHA-256 helpers.
+`text_prosody.reproducibility` centralizes optional deterministic Torch settings so scripts and
+tests use the same contract.
 
 All interfaces are alpha and may change before 1.0. Scientific-default changes follow the process
 in `GOVERNANCE.md`.
