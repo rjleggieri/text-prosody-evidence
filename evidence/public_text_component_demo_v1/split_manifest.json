@@ -1,0 +1,54 @@
+{
+  "grouping_field": "official_meta_tsv_document",
+  "item_identifiers_included": false,
+  "items_with_exactly_one_outer_holdout_prediction": 9061,
+  "outer_folds": [
+    {
+      "holdout_group_count": 25,
+      "holdout_item_count": 1813,
+      "holdout_item_set_sha256": "3f7f45b1cb4d1bfde12511201d13a6c83e2a576d47910f9f28a304b4f17ce7b5",
+      "outer_fold": 0,
+      "selected_alpha": 1.0,
+      "training_group_count": 111,
+      "training_item_count": 7248
+    },
+    {
+      "holdout_group_count": 27,
+      "holdout_item_count": 1812,
+      "holdout_item_set_sha256": "87bfb41aa832f3b997257c2e3e9c76b73f8a0c624123d63d7dc271e1a409cec8",
+      "outer_fold": 1,
+      "selected_alpha": 1.0,
+      "training_group_count": 109,
+      "training_item_count": 7249
+    },
+    {
+      "holdout_group_count": 28,
+      "holdout_item_count": 1812,
+      "holdout_item_set_sha256": "7d2ec8dc133615fc9a502e52e9f68d113f4746b82db96a9b6e4292eda35699aa",
+      "outer_fold": 2,
+      "selected_alpha": 1.0,
+      "training_group_count": 108,
+      "training_item_count": 7249
+    },
+    {
+      "holdout_group_count": 28,
+      "holdout_item_count": 1812,
+      "holdout_item_set_sha256": "94815618992d920b079b89a113dfbb6b893d458bd79af1e3be3d97e47a41fbbd",
+      "outer_fold": 3,
+      "selected_alpha": 1.0,
+      "training_group_count": 108,
+      "training_item_count": 7249
+    },
+    {
+      "holdout_group_count": 28,
+      "holdout_item_count": 1812,
+      "holdout_item_set_sha256": "c70fa9fd14854ea3bb263a502388de433921c91dfc64f2fc4710c53facab3a67",
+      "outer_fold": 4,
+      "selected_alpha": 1.0,
+      "training_group_count": 108,
+      "training_item_count": 7249
+    }
+  ],
+  "schema_version": 1,
+  "source_groups_cross_outer_folds": 0
+}

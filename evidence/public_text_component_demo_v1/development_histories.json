@@ -1,0 +1,1914 @@
+{
+  "candidate_alphas": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "fitted_ridge_specification_hashes": [
+    "416941e54272a51317165f961e02773500937dce7c42218494b77e79ea82def1",
+    "416941e54272a51317165f961e02773500937dce7c42218494b77e79ea82def1",
+    "416941e54272a51317165f961e02773500937dce7c42218494b77e79ea82def1",
+    "416941e54272a51317165f961e02773500937dce7c42218494b77e79ea82def1",
+    "d0d593f1dccb25675697c484f7ef25f05fda5250d2dd68443e9f7bc2eb606f97"
+  ],
+  "identical_candidate_set_in_every_outer_fold": true,
+  "outer_fold_histories": [
+    {
+      "candidate_alphas": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "outer_fold": 0,
+      "selected_alpha": 1.0,
+      "selection_objective": "mean_valence_arousal_rmse",
+      "tie_break": "listed_alpha_order",
+      "trials": [
+        {
+          "alpha": 1.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.3523348179674635,
+                  "calibration_slope": 0.5536572653522928,
+                  "ccc": 0.1467769614415681,
+                  "mae": 0.2546771689676596,
+                  "n": 1812,
+                  "pearson": 0.2167700774883494,
+                  "rmse": 0.3373808948253027,
+                  "spearman": 0.20433235600749222
+                },
+                "valence": {
+                  "calibration_intercept": 0.6020336188660051,
+                  "calibration_slope": 0.805407464192763,
+                  "ccc": 0.3026134619770738,
+                  "mae": 0.2651729584876406,
+                  "n": 1812,
+                  "pearson": 0.3879165255779406,
+                  "rmse": 0.36454099460845024,
+                  "spearman": 0.35933661655048976
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 84,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.4371397603400402,
+                  "calibration_slope": 0.5277998190925147,
+                  "ccc": 0.15534673299116708,
+                  "mae": 0.24990546973335523,
+                  "n": 1812,
+                  "pearson": 0.21931473131618112,
+                  "rmse": 0.3249378281951457,
+                  "spearman": 0.18783416875360198
+                },
+                "valence": {
+                  "calibration_intercept": 0.5862239413055744,
+                  "calibration_slope": 0.7902335262780404,
+                  "ccc": 0.26749810254100487,
+                  "mae": 0.2894440815552097,
+                  "n": 1812,
+                  "pearson": 0.3581935361333609,
+                  "rmse": 0.3975125412106173,
+                  "spearman": 0.3432536288721884
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.0617984528074689,
+                  "calibration_slope": 0.6496071218844363,
+                  "ccc": 0.16843691301108318,
+                  "mae": 0.255332143045164,
+                  "n": 1812,
+                  "pearson": 0.25078629432187427,
+                  "rmse": 0.3362404712857161,
+                  "spearman": 0.20414722001517352
+                },
+                "valence": {
+                  "calibration_intercept": 0.304543204566391,
+                  "calibration_slope": 0.9053598334872326,
+                  "ccc": 0.3310054803128366,
+                  "mae": 0.2569840164880351,
+                  "n": 1812,
+                  "pearson": 0.42879780685570934,
+                  "rmse": 0.36196828959151206,
+                  "spearman": 0.37757035980567194
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.5459868270298989,
+                  "calibration_slope": 0.49234509879846133,
+                  "ccc": 0.12722169978098966,
+                  "mae": 0.24609889916162436,
+                  "n": 1812,
+                  "pearson": 0.1896465173076176,
+                  "rmse": 0.32166270086333687,
+                  "spearman": 0.16692762662109126
+                },
+                "valence": {
+                  "calibration_intercept": 0.04897767392295019,
+                  "calibration_slope": 0.9775669733005534,
+                  "ccc": 0.28325782828179497,
+                  "mae": 0.2688511148909856,
+                  "n": 1812,
+                  "pearson": 0.40279283435811997,
+                  "rmse": 0.3748899315755147,
+                  "spearman": 0.4078342014121389
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.3525584130038836
+        },
+        {
+          "alpha": 10.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.540962249293439,
+                  "calibration_slope": 1.4990543113110526,
+                  "ccc": 0.07913453717975126,
+                  "mae": 0.24497203751769484,
+                  "n": 1812,
+                  "pearson": 0.24696180086664624,
+                  "rmse": 0.33050305082109366,
+                  "spearman": 0.2438485361113792
+                },
+                "valence": {
+                  "calibration_intercept": -2.488166016214613,
+                  "calibration_slope": 1.841559428209283,
+                  "ccc": 0.15386161360158832,
+                  "mae": 0.2558096420776944,
+                  "n": 1812,
+                  "pearson": 0.38517578622723675,
+                  "rmse": 0.36978128409370287,
+                  "spearman": 0.3763166133096709
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 84,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.2001823115790053,
+                  "calibration_slope": 1.3927477546955773,
+                  "ccc": 0.0778534397542857,
+                  "mae": 0.23940810604674967,
+                  "n": 1812,
+                  "pearson": 0.2361661580505723,
+                  "rmse": 0.31792261390812365,
+                  "spearman": 0.19917558936058374
+                },
+                "valence": {
+                  "calibration_intercept": -2.1289246042002805,
+                  "calibration_slope": 1.6943074257472133,
+                  "ccc": 0.1257790137582364,
+                  "mae": 0.28408304494198927,
+                  "n": 1812,
+                  "pearson": 0.3351267037376874,
+                  "rmse": 0.40465623919327226,
+                  "spearman": 0.32285697331944896
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.7578131265390216,
+                  "calibration_slope": 1.5730164227404204,
+                  "ccc": 0.0801102455060232,
+                  "mae": 0.24782076371831627,
+                  "n": 1812,
+                  "pearson": 0.25434101687601535,
+                  "rmse": 0.33420754177946715,
+                  "spearman": 0.22247198407960148
+                },
+                "valence": {
+                  "calibration_intercept": -2.948678575373023,
+                  "calibration_slope": 1.9995542725128388,
+                  "ccc": 0.1586058270552073,
+                  "mae": 0.2508691096438336,
+                  "n": 1812,
+                  "pearson": 0.40775018928636864,
+                  "rmse": 0.3752344013057041,
+                  "spearman": 0.3937041572514721
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.5564608868266339,
+                  "calibration_slope": 1.5106571009214032,
+                  "ccc": 0.07731479957693264,
+                  "mae": 0.2324471416151043,
+                  "n": 1812,
+                  "pearson": 0.24481161120429526,
+                  "rmse": 0.3126538587418477,
+                  "spearman": 0.21671749516342995
+                },
+                "valence": {
+                  "calibration_intercept": -3.448670253879679,
+                  "calibration_slope": 2.14717569019382,
+                  "ccc": 0.13528114704880856,
+                  "mae": 0.266558440989659,
+                  "n": 1812,
+                  "pearson": 0.38731540718702356,
+                  "rmse": 0.38659353809152414,
+                  "spearman": 0.4075293074484345
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.35412017310215377
+        },
+        {
+          "alpha": 100.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -17.717894423381765,
+                  "calibration_slope": 6.807997985947767,
+                  "ccc": 0.015814310686018393,
+                  "mae": 0.24988714582348123,
+                  "n": 1812,
+                  "pearson": 0.23215811245508203,
+                  "rmse": 0.3371528681038224,
+                  "spearman": 0.23473203269148135
+                },
+                "valence": {
+                  "calibration_intercept": -23.158392159972713,
+                  "calibration_slope": 8.771693929134942,
+                  "ccc": 0.027756971039775213,
+                  "mae": 0.26095543233838947,
+                  "n": 1812,
+                  "pearson": 0.3498485912590603,
+                  "rmse": 0.38838552689772055,
+                  "spearman": 0.35433309331238905
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 84,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -15.09494949893955,
+                  "calibration_slope": 5.952452329999454,
+                  "ccc": 0.014675518909394019,
+                  "mae": 0.24373079260837688,
+                  "n": 1812,
+                  "pearson": 0.20913435885048157,
+                  "rmse": 0.32422705128402773,
+                  "spearman": 0.18401856516701456
+                },
+                "valence": {
+                  "calibration_intercept": -21.673630782684857,
+                  "calibration_slope": 8.19760510894119,
+                  "ccc": 0.022139462819611475,
+                  "mae": 0.2869720300373793,
+                  "n": 1812,
+                  "pearson": 0.3046770928282135,
+                  "rmse": 0.42161690733709306,
+                  "spearman": 0.29402264876263007
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -18.87986550735872,
+                  "calibration_slope": 7.186936561569543,
+                  "ccc": 0.015669036739696354,
+                  "mae": 0.2526550057492998,
+                  "n": 1812,
+                  "pearson": 0.23744626661077523,
+                  "rmse": 0.34141726202625644,
+                  "spearman": 0.21523068295431222
+                },
+                "valence": {
+                  "calibration_intercept": -25.61127916655742,
+                  "calibration_slope": 9.605935600299174,
+                  "ccc": 0.027956715954442282,
+                  "mae": 0.25759629204216805,
+                  "n": 1812,
+                  "pearson": 0.36820665344946446,
+                  "rmse": 0.3957823431426306,
+                  "spearman": 0.3739011947811423
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -18.87938158379996,
+                  "calibration_slope": 7.190579278396364,
+                  "ccc": 0.016792891473544666,
+                  "mae": 0.2385573686300429,
+                  "n": 1812,
+                  "pearson": 0.24588552804210928,
+                  "rmse": 0.31880862499906304,
+                  "spearman": 0.22056996620063943
+                },
+                "valence": {
+                  "calibration_intercept": -27.340237405736428,
+                  "calibration_slope": 10.14161371260181,
+                  "ccc": 0.02398159257693246,
+                  "mae": 0.27317402603554525,
+                  "n": 1812,
+                  "pearson": 0.348927899596372,
+                  "rmse": 0.4043681493960783,
+                  "spearman": 0.37581526150806077
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.3666292392958825
+        }
+      ]
+    },
+    {
+      "candidate_alphas": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "outer_fold": 1,
+      "selected_alpha": 1.0,
+      "selection_objective": "mean_valence_arousal_rmse",
+      "tie_break": "listed_alpha_order",
+      "trials": [
+        {
+          "alpha": 1.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 2.1149484462142882,
+                  "calibration_slope": 0.3169423986505526,
+                  "ccc": 0.07614738215897562,
+                  "mae": 0.24924188147600865,
+                  "n": 1813,
+                  "pearson": 0.11781364900569195,
+                  "rmse": 0.32936191274661347,
+                  "spearman": 0.11264621938065267
+                },
+                "valence": {
+                  "calibration_intercept": -0.11629091446111993,
+                  "calibration_slope": 1.0151522372581605,
+                  "ccc": 0.22368646473040424,
+                  "mae": 0.34103865265542527,
+                  "n": 1813,
+                  "pearson": 0.3609129791429462,
+                  "rmse": 0.46450307553851033,
+                  "spearman": 0.36047502779722296
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 84,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.4934891395691712,
+                  "calibration_slope": 0.5084213415456901,
+                  "ccc": 0.13457966729431745,
+                  "mae": 0.2501445006822742,
+                  "n": 1812,
+                  "pearson": 0.1987476528145658,
+                  "rmse": 0.32628180882750496,
+                  "spearman": 0.1840883386002651
+                },
+                "valence": {
+                  "calibration_intercept": 0.470801872957713,
+                  "calibration_slope": 0.832600182084428,
+                  "ccc": 0.26566737952925845,
+                  "mae": 0.2918171928341109,
+                  "n": 1812,
+                  "pearson": 0.3634337665467259,
+                  "rmse": 0.39477633469757595,
+                  "spearman": 0.3519106960446648
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.0429322654209916,
+                  "calibration_slope": 0.6554200369131289,
+                  "ccc": 0.14379314855278705,
+                  "mae": 0.25337883240939224,
+                  "n": 1812,
+                  "pearson": 0.23015690481792292,
+                  "rmse": 0.33738596764118256,
+                  "spearman": 0.20113795116028074
+                },
+                "valence": {
+                  "calibration_intercept": 0.542550818386478,
+                  "calibration_slope": 0.8304706683323866,
+                  "ccc": 0.2940829532404766,
+                  "mae": 0.26361923628786216,
+                  "n": 1812,
+                  "pearson": 0.3869070220756995,
+                  "rmse": 0.3716389855410491,
+                  "spearman": 0.3574715661351
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.2862687219604823,
+                  "calibration_slope": 0.5748979216391248,
+                  "ccc": 0.14458296313226165,
+                  "mae": 0.2422420381186723,
+                  "n": 1812,
+                  "pearson": 0.21822463673664064,
+                  "rmse": 0.31809589612770844,
+                  "spearman": 0.1982481755217852
+                },
+                "valence": {
+                  "calibration_intercept": 0.05289843375580296,
+                  "calibration_slope": 0.9793389977338264,
+                  "ccc": 0.31888257044210555,
+                  "mae": 0.2685008072752555,
+                  "n": 1812,
+                  "pearson": 0.43197750899107906,
+                  "rmse": 0.3690583195364351,
+                  "spearman": 0.4244431195846393
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.3648564262930094
+        },
+        {
+          "alpha": 10.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.0281052405501485,
+                  "calibration_slope": 0.6745415779633175,
+                  "ccc": 0.026594645890347303,
+                  "mae": 0.23698218839428112,
+                  "n": 1813,
+                  "pearson": 0.09633254551684343,
+                  "rmse": 0.3206361715120101,
+                  "spearman": 0.08678338195964473
+                },
+                "valence": {
+                  "calibration_intercept": -3.5160269219128293,
+                  "calibration_slope": 2.148398339636892,
+                  "ccc": 0.0770901657330441,
+                  "mae": 0.34626055177059906,
+                  "n": 1813,
+                  "pearson": 0.29422905965983603,
+                  "rmse": 0.48346079532160885,
+                  "spearman": 0.3231491343638189
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 84,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.3163554362463379,
+                  "calibration_slope": 1.4271776022490434,
+                  "ccc": 0.06206844765347581,
+                  "mae": 0.24197039171476487,
+                  "n": 1812,
+                  "pearson": 0.2128570456731308,
+                  "rmse": 0.31972608321044516,
+                  "spearman": 0.18988773140109572
+                },
+                "valence": {
+                  "calibration_intercept": -2.2466397121335993,
+                  "calibration_slope": 1.7448718441174829,
+                  "ccc": 0.1194412720686245,
+                  "mae": 0.28644656854631684,
+                  "n": 1812,
+                  "pearson": 0.3294349299191353,
+                  "rmse": 0.403698023288504,
+                  "spearman": 0.3143495554020225
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -2.2528134509834463,
+                  "calibration_slope": 1.7324444570477238,
+                  "ccc": 0.06289461742047513,
+                  "mae": 0.2495101660906274,
+                  "n": 1812,
+                  "pearson": 0.23572177519007617,
+                  "rmse": 0.33620187489534004,
+                  "spearman": 0.21752113813798393
+                },
+                "valence": {
+                  "calibration_intercept": -2.1186970982576314,
+                  "calibration_slope": 1.7339168320766423,
+                  "ccc": 0.1303896690078518,
+                  "mae": 0.259911935596043,
+                  "n": 1812,
+                  "pearson": 0.3459381820849735,
+                  "rmse": 0.3833187075727926,
+                  "spearman": 0.343271238068851
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -2.2754677829453556,
+                  "calibration_slope": 1.7413918121859282,
+                  "ccc": 0.06844902467939783,
+                  "mae": 0.23421675976923328,
+                  "n": 1812,
+                  "pearson": 0.24669917545259115,
+                  "rmse": 0.3133707075015812,
+                  "spearman": 0.21806332900723602
+                },
+                "valence": {
+                  "calibration_intercept": -3.1072289683778327,
+                  "calibration_slope": 2.0430852170325773,
+                  "ccc": 0.13824769996328626,
+                  "mae": 0.2696956427480462,
+                  "n": 1812,
+                  "pearson": 0.3823735783775661,
+                  "rmse": 0.3863773731255688,
+                  "spearman": 0.38980272215831574
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.36940704023429694
+        },
+        {
+          "alpha": 100.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -5.398798568976081,
+                  "calibration_slope": 2.783519690821974,
+                  "ccc": 0.004399737074114259,
+                  "mae": 0.23905072770746852,
+                  "n": 1813,
+                  "pearson": 0.07872337839488247,
+                  "rmse": 0.32072277027786783,
+                  "spearman": 0.07230841406287358
+                },
+                "valence": {
+                  "calibration_intercept": -26.38176186614173,
+                  "calibration_slope": 9.813399884027836,
+                  "ccc": 0.011804586550446196,
+                  "mae": 0.35098625860338606,
+                  "n": 1813,
+                  "pearson": 0.24342278273288168,
+                  "rmse": 0.4948806311042254,
+                  "spearman": 0.2836374519815306
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 84,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -13.540646636634534,
+                  "calibration_slope": 5.427460157519628,
+                  "ccc": 0.010497064414848377,
+                  "mae": 0.2459742108427178,
+                  "n": 1812,
+                  "pearson": 0.16887867050675856,
+                  "rmse": 0.3248852604943972,
+                  "spearman": 0.15624823746164776
+                },
+                "valence": {
+                  "calibration_intercept": -19.586169792079502,
+                  "calibration_slope": 7.575812776800328,
+                  "ccc": 0.020311080068009933,
+                  "mae": 0.29108067848605307,
+                  "n": 1812,
+                  "pearson": 0.27840000853362323,
+                  "rmse": 0.4187926089965703,
+                  "spearman": 0.2558392288235433
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -21.872109871890768,
+                  "calibration_slope": 8.14624714812959,
+                  "ccc": 0.011686002547854343,
+                  "mae": 0.2552480863005352,
+                  "n": 1812,
+                  "pearson": 0.2184123554373666,
+                  "rmse": 0.34225949708633085,
+                  "spearman": 0.20660728890626678
+                },
+                "valence": {
+                  "calibration_intercept": -19.826217158662605,
+                  "calibration_slope": 7.741240549552427,
+                  "ccc": 0.02215836045397739,
+                  "mae": 0.27233084846852607,
+                  "n": 1812,
+                  "pearson": 0.29700053067589177,
+                  "rmse": 0.400638138858139,
+                  "spearman": 0.30098090806763295
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -21.855459290485346,
+                  "calibration_slope": 8.143607135407034,
+                  "ccc": 0.013247557155194363,
+                  "mae": 0.24098920693999962,
+                  "n": 1812,
+                  "pearson": 0.2325524292520684,
+                  "rmse": 0.319571430374168,
+                  "spearman": 0.20737965643515302
+                },
+                "valence": {
+                  "calibration_intercept": -22.755404061845628,
+                  "calibration_slope": 8.68804917832831,
+                  "ccc": 0.022208142839471534,
+                  "mae": 0.2839258708474681,
+                  "n": 1812,
+                  "pearson": 0.31154286862190245,
+                  "rmse": 0.40572199177624896,
+                  "spearman": 0.3210516512842246
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.3793411563306007
+        }
+      ]
+    },
+    {
+      "candidate_alphas": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "outer_fold": 2,
+      "selected_alpha": 1.0,
+      "selection_objective": "mean_valence_arousal_rmse",
+      "tie_break": "listed_alpha_order",
+      "trials": [
+        {
+          "alpha": 1.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 2.2107521197997646,
+                  "calibration_slope": 0.28610088046125987,
+                  "ccc": 0.06870436391090193,
+                  "mae": 0.25051428260033126,
+                  "n": 1813,
+                  "pearson": 0.10658125443203018,
+                  "rmse": 0.3314873298618702,
+                  "spearman": 0.1088490670574459
+                },
+                "valence": {
+                  "calibration_intercept": 0.1317947848378551,
+                  "calibration_slope": 0.9255200211185902,
+                  "ccc": 0.19178605166798499,
+                  "mae": 0.3482227264630437,
+                  "n": 1813,
+                  "pearson": 0.3200935375577605,
+                  "rmse": 0.47543550786693994,
+                  "spearman": 0.3093156268059779
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.3532594149865154,
+                  "calibration_slope": 0.5526107786900796,
+                  "ccc": 0.1295058831700188,
+                  "mae": 0.2562028495225925,
+                  "n": 1812,
+                  "pearson": 0.20179870408055878,
+                  "rmse": 0.3380540804712563,
+                  "spearman": 0.18999792636770307
+                },
+                "valence": {
+                  "calibration_intercept": 0.498536396934177,
+                  "calibration_slope": 0.8376902675327963,
+                  "ccc": 0.2858924846693845,
+                  "mae": 0.2663428267522905,
+                  "n": 1812,
+                  "pearson": 0.38016841606849416,
+                  "rmse": 0.36470187058430986,
+                  "spearman": 0.3513270249033119
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.4013993986133597,
+                  "calibration_slope": 0.5385934784394775,
+                  "ccc": 0.1334157431632402,
+                  "mae": 0.2579635164589811,
+                  "n": 1812,
+                  "pearson": 0.20254563472656414,
+                  "rmse": 0.3420871900127645,
+                  "spearman": 0.17982899661738674
+                },
+                "valence": {
+                  "calibration_intercept": 0.5122800575749868,
+                  "calibration_slope": 0.8350979100114841,
+                  "ccc": 0.29197343355756933,
+                  "mae": 0.2623162963653985,
+                  "n": 1812,
+                  "pearson": 0.38475126262030107,
+                  "rmse": 0.37042420483578936,
+                  "spearman": 0.34774128603208354
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.3425022502902932,
+                  "calibration_slope": 0.5585794806882546,
+                  "ccc": 0.14714333179814304,
+                  "mae": 0.2432167679837944,
+                  "n": 1812,
+                  "pearson": 0.21755833215499845,
+                  "rmse": 0.31843458686207043,
+                  "spearman": 0.1990853835941043
+                },
+                "valence": {
+                  "calibration_intercept": 0.06616549982109114,
+                  "calibration_slope": 0.9682925770259649,
+                  "ccc": 0.31316202772538737,
+                  "mae": 0.2704423572415665,
+                  "n": 1812,
+                  "pearson": 0.4263950921302001,
+                  "rmse": 0.3712412950844006,
+                  "spearman": 0.4175081611079596
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.36539704917984095
+        },
+        {
+          "alpha": 10.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 0.9301079471299255,
+                  "calibration_slope": 0.7073899782401828,
+                  "ccc": 0.026133985001747025,
+                  "mae": 0.2372932703487573,
+                  "n": 1813,
+                  "pearson": 0.09783155883657077,
+                  "rmse": 0.32084139016081853,
+                  "spearman": 0.0849420526843486
+                },
+                "valence": {
+                  "calibration_intercept": -2.5493134499852736,
+                  "calibration_slope": 1.8122080246986958,
+                  "ccc": 0.06364201776510811,
+                  "mae": 0.35050503778842423,
+                  "n": 1813,
+                  "pearson": 0.24741397747967578,
+                  "rmse": 0.4907068833700639,
+                  "spearman": 0.26819406442959953
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.7857346582488245,
+                  "calibration_slope": 1.5769779726112096,
+                  "ccc": 0.06635108015519348,
+                  "mae": 0.24729945392077476,
+                  "n": 1812,
+                  "pearson": 0.2314043061148855,
+                  "rmse": 0.33202114104168773,
+                  "spearman": 0.2279696583934119
+                },
+                "valence": {
+                  "calibration_intercept": -2.3059965827179534,
+                  "calibration_slope": 1.7796596118650334,
+                  "ccc": 0.1345286038701153,
+                  "mae": 0.25957903167437674,
+                  "n": 1812,
+                  "pearson": 0.35325412329903244,
+                  "rmse": 0.37313077443958387,
+                  "spearman": 0.33907783995514373
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.691614724007953,
+                  "calibration_slope": 1.5496461681635922,
+                  "ccc": 0.06582472212200087,
+                  "mae": 0.24974341333938824,
+                  "n": 1812,
+                  "pearson": 0.22840005487740894,
+                  "rmse": 0.33615703916201967,
+                  "spearman": 0.20366382746462558
+                },
+                "valence": {
+                  "calibration_intercept": -2.6231672500526044,
+                  "calibration_slope": 1.8916630047568546,
+                  "ccc": 0.13522579572150217,
+                  "mae": 0.2548806934087349,
+                  "n": 1812,
+                  "pearson": 0.3656062741760034,
+                  "rmse": 0.3797941220025093,
+                  "spearman": 0.34878629525099
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -2.0031262925302933,
+                  "calibration_slope": 1.6564607029173597,
+                  "ccc": 0.06998251361679729,
+                  "mae": 0.23343476196019705,
+                  "n": 1812,
+                  "pearson": 0.24334608023580578,
+                  "rmse": 0.31318708449190946,
+                  "spearman": 0.217176457981625
+                },
+                "valence": {
+                  "calibration_intercept": -3.2582339305551065,
+                  "calibration_slope": 2.0782143028387505,
+                  "ccc": 0.13413794603777363,
+                  "mae": 0.26875544105004057,
+                  "n": 1812,
+                  "pearson": 0.37979081365459394,
+                  "rmse": 0.3872153821773126,
+                  "spearman": 0.381852544855719
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.36811887249290476
+        },
+        {
+          "alpha": 100.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -6.254436174768882,
+                  "calibration_slope": 3.064604451764114,
+                  "ccc": 0.004775231475465292,
+                  "mae": 0.23910169611179127,
+                  "n": 1813,
+                  "pearson": 0.08606007974203181,
+                  "rmse": 0.32068008092905864,
+                  "spearman": 0.07664294669695627
+                },
+                "valence": {
+                  "calibration_intercept": -21.099992410284752,
+                  "calibration_slope": 7.984717250990669,
+                  "ccc": 0.009482686816179144,
+                  "mae": 0.3517090077117378,
+                  "n": 1813,
+                  "pearson": 0.1982834773927882,
+                  "rmse": 0.49920053577957096,
+                  "spearman": 0.23029451624831337
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -16.433899811861288,
+                  "calibration_slope": 6.370850991533682,
+                  "ccc": 0.012850014988841916,
+                  "mae": 0.2521225456698574,
+                  "n": 1812,
+                  "pearson": 0.2024454023510997,
+                  "rmse": 0.33766672294770966,
+                  "spearman": 0.20153919641545842
+                },
+                "valence": {
+                  "calibration_intercept": -19.463271051373194,
+                  "calibration_slope": 7.550945933532381,
+                  "ccc": 0.023020999366025197,
+                  "mae": 0.26491260819610374,
+                  "n": 1812,
+                  "pearson": 0.29597524384737267,
+                  "rmse": 0.3898149535008907,
+                  "spearman": 0.29511448370966953
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -18.47684480763899,
+                  "calibration_slope": 7.036307389862596,
+                  "ccc": 0.013048628464402716,
+                  "mae": 0.2552096799337096,
+                  "n": 1812,
+                  "pearson": 0.21451837208582367,
+                  "rmse": 0.3420583109197499,
+                  "spearman": 0.19384628025903872
+                },
+                "valence": {
+                  "calibration_intercept": -22.639295807054154,
+                  "calibration_slope": 8.631306550680042,
+                  "ccc": 0.02296380505638221,
+                  "mae": 0.26197788647988923,
+                  "n": 1812,
+                  "pearson": 0.3169242707440077,
+                  "rmse": 0.3975442931503589,
+                  "spearman": 0.30964780620957566
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -18.430848565176863,
+                  "calibration_slope": 7.027358016775542,
+                  "ccc": 0.013904842023786286,
+                  "mae": 0.24060634793173497,
+                  "n": 1812,
+                  "pearson": 0.22129616472571675,
+                  "rmse": 0.31942838073913854,
+                  "spearman": 0.18928932580389954
+                },
+                "valence": {
+                  "calibration_intercept": -22.105606544360786,
+                  "calibration_slope": 8.405283665888346,
+                  "ccc": 0.021402224701079164,
+                  "mae": 0.275927212429032,
+                  "n": 1812,
+                  "pearson": 0.3001323682695785,
+                  "rmse": 0.40496182285575355,
+                  "spearman": 0.30300139848628216
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.37766217404555846
+        }
+      ]
+    },
+    {
+      "candidate_alphas": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "outer_fold": 3,
+      "selected_alpha": 1.0,
+      "selection_objective": "mean_valence_arousal_rmse",
+      "tie_break": "listed_alpha_order",
+      "trials": [
+        {
+          "alpha": 1.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 2.224826462867978,
+                  "calibration_slope": 0.2816363833743277,
+                  "ccc": 0.06613534904557022,
+                  "mae": 0.25234749336193607,
+                  "n": 1813,
+                  "pearson": 0.10367112646963463,
+                  "rmse": 0.33169021680060107,
+                  "spearman": 0.09065342202474233
+                },
+                "valence": {
+                  "calibration_intercept": -0.2276742590016189,
+                  "calibration_slope": 1.0536534989515423,
+                  "ccc": 0.231185184947566,
+                  "mae": 0.3396639681709119,
+                  "n": 1813,
+                  "pearson": 0.3733642879557535,
+                  "rmse": 0.4617083149883118,
+                  "spearman": 0.3747947040460638
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.4772124704575078,
+                  "calibration_slope": 0.5108982492039044,
+                  "ccc": 0.11976532726607594,
+                  "mae": 0.2558463135959818,
+                  "n": 1812,
+                  "pearson": 0.18697772626557588,
+                  "rmse": 0.3406400157368216,
+                  "spearman": 0.1802216008270896
+                },
+                "valence": {
+                  "calibration_intercept": 0.7467781883650279,
+                  "calibration_slope": 0.7579684629522939,
+                  "ccc": 0.2722363622591193,
+                  "mae": 0.27300144697666445,
+                  "n": 1812,
+                  "pearson": 0.3553398437711782,
+                  "rmse": 0.3707351028205097,
+                  "spearman": 0.3213191532870872
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.737329607793607,
+                  "calibration_slope": 0.4295581952514208,
+                  "ccc": 0.10846325759070596,
+                  "mae": 0.2522743669273351,
+                  "n": 1812,
+                  "pearson": 0.1633470663354398,
+                  "rmse": 0.3298432132307251,
+                  "spearman": 0.14953656465484624
+                },
+                "valence": {
+                  "calibration_intercept": 0.5954166323723191,
+                  "calibration_slope": 0.7911308119872282,
+                  "ccc": 0.2617300929855578,
+                  "mae": 0.2934749592504631,
+                  "n": 1812,
+                  "pearson": 0.3527688484651727,
+                  "rmse": 0.3971125598037691,
+                  "spearman": 0.3331230492362652
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.4386503512907924,
+                  "calibration_slope": 0.5254688264274084,
+                  "ccc": 0.13276468066253602,
+                  "mae": 0.24392860224690494,
+                  "n": 1812,
+                  "pearson": 0.19993391606677535,
+                  "rmse": 0.32030186249793685,
+                  "spearman": 0.17672727352306328
+                },
+                "valence": {
+                  "calibration_intercept": 0.16180631137827461,
+                  "calibration_slope": 0.9469197774613064,
+                  "ccc": 0.3002095212590809,
+                  "mae": 0.2735144629812765,
+                  "n": 1812,
+                  "pearson": 0.4110027056063385,
+                  "rmse": 0.3730479462343566,
+                  "spearman": 0.39863166162096114
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.36651901408200904
+        },
+        {
+          "alpha": 10.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 0.9947229016259602,
+                  "calibration_slope": 0.686057133408719,
+                  "ccc": 0.02640688399386761,
+                  "mae": 0.23767199040624554,
+                  "n": 1813,
+                  "pearson": 0.09687282803738052,
+                  "rmse": 0.32088253901862346,
+                  "spearman": 0.06892140307477254
+                },
+                "valence": {
+                  "calibration_intercept": -4.075586244372305,
+                  "calibration_slope": 2.338078328445807,
+                  "ccc": 0.07824516860137452,
+                  "mae": 0.3458142051689118,
+                  "n": 1813,
+                  "pearson": 0.30871295322306036,
+                  "rmse": 0.4823443828225621,
+                  "spearman": 0.3465187627757879
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.4259906022690527,
+                  "calibration_slope": 1.4580785238127192,
+                  "ccc": 0.05908166895703779,
+                  "mae": 0.24862433164967151,
+                  "n": 1812,
+                  "pearson": 0.20999180811649953,
+                  "rmse": 0.3333502597276657,
+                  "spearman": 0.20594189229824533
+                },
+                "valence": {
+                  "calibration_intercept": -1.9051064084396172,
+                  "calibration_slope": 1.6575879033032346,
+                  "ccc": 0.12929303834364742,
+                  "mae": 0.2654208974833388,
+                  "n": 1812,
+                  "pearson": 0.33598136185165745,
+                  "rmse": 0.37622582186195014,
+                  "spearman": 0.3204880173004351
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.0179686564436765,
+                  "calibration_slope": 1.329679393073118,
+                  "ccc": 0.05816849971036357,
+                  "mae": 0.24251623282156654,
+                  "n": 1812,
+                  "pearson": 0.1989120960843079,
+                  "rmse": 0.32041240089218337,
+                  "spearman": 0.16787450105150864
+                },
+                "valence": {
+                  "calibration_intercept": -2.411955655037266,
+                  "calibration_slope": 1.8025044276905966,
+                  "ccc": 0.11881590638920513,
+                  "mae": 0.2859152451329441,
+                  "n": 1812,
+                  "pearson": 0.333544159977378,
+                  "rmse": 0.4033462230508748,
+                  "spearman": 0.3129265084303429
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.8015154783369394,
+                  "calibration_slope": 1.5851752546074087,
+                  "ccc": 0.06244439757130674,
+                  "mae": 0.23561516350874778,
+                  "n": 1812,
+                  "pearson": 0.2248700921578246,
+                  "rmse": 0.314459052384649,
+                  "spearman": 0.20076233002134924
+                },
+                "valence": {
+                  "calibration_intercept": -3.2850716715191592,
+                  "calibration_slope": 2.1085315824014117,
+                  "ccc": 0.12689528202454428,
+                  "mae": 0.2719619372908342,
+                  "n": 1812,
+                  "pearson": 0.371638974580235,
+                  "rmse": 0.3883706575439874,
+                  "spearman": 0.37369744660609566
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.3685021629982279
+        },
+        {
+          "alpha": 100.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -6.129155647636832,
+                  "calibration_slope": 3.0216755961916046,
+                  "ccc": 0.004755867882551821,
+                  "mae": 0.23934004212594862,
+                  "n": 1813,
+                  "pearson": 0.08523234940495478,
+                  "rmse": 0.3204974246316489,
+                  "spearman": 0.05307312196055039
+                },
+                "valence": {
+                  "calibration_intercept": -29.941777804346287,
+                  "calibration_slope": 11.017041684231943,
+                  "ccc": 0.011806801788803821,
+                  "mae": 0.3514766713564538,
+                  "n": 1813,
+                  "pearson": 0.257710777492307,
+                  "rmse": 0.4944334380537815,
+                  "spearman": 0.30955897237845337
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -18.794541144776943,
+                  "calibration_slope": 7.136643489027019,
+                  "ccc": 0.011294860074169124,
+                  "mae": 0.25291376766149715,
+                  "n": 1812,
+                  "pearson": 0.20089120152564935,
+                  "rmse": 0.33794513417896416,
+                  "spearman": 0.2013564174531049
+                },
+                "valence": {
+                  "calibration_intercept": -18.861159848781636,
+                  "calibration_slope": 7.4104866924661374,
+                  "ccc": 0.0220359443637539,
+                  "mae": 0.2758930591725548,
+                  "n": 1812,
+                  "pearson": 0.2888632830893416,
+                  "rmse": 0.392724368476056,
+                  "spearman": 0.2853988721480235
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -15.676136304020742,
+                  "calibration_slope": 6.121156532062241,
+                  "ccc": 0.010952835489594658,
+                  "mae": 0.2463638831653977,
+                  "n": 1812,
+                  "pearson": 0.18321700337368405,
+                  "rmse": 0.3248427426502341,
+                  "spearman": 0.1596861986828975
+                },
+                "valence": {
+                  "calibration_intercept": -21.525998894428863,
+                  "calibration_slope": 8.236910488031011,
+                  "ccc": 0.0198622867875451,
+                  "mae": 0.29193101443178177,
+                  "n": 1812,
+                  "pearson": 0.2868905758137014,
+                  "rmse": 0.418629497771032,
+                  "spearman": 0.26494054102362347
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -21.76634888232391,
+                  "calibration_slope": 8.105958295095292,
+                  "ccc": 0.012240733276621268,
+                  "mae": 0.24177809773586342,
+                  "n": 1812,
+                  "pearson": 0.22312135794122911,
+                  "rmse": 0.31987483129505695,
+                  "spearman": 0.20547434058149436
+                },
+                "valence": {
+                  "calibration_intercept": -24.4550231036333,
+                  "calibration_slope": 9.274932358583689,
+                  "ccc": 0.020077070391430227,
+                  "mae": 0.2859257840658621,
+                  "n": 1812,
+                  "pearson": 0.30626636091251375,
+                  "rmse": 0.4064381767667147,
+                  "spearman": 0.3102272317170866
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.3778730909319109
+        }
+      ]
+    },
+    {
+      "candidate_alphas": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "outer_fold": 4,
+      "selected_alpha": 1.0,
+      "selection_objective": "mean_valence_arousal_rmse",
+      "tie_break": "listed_alpha_order",
+      "trials": [
+        {
+          "alpha": 1.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 2.341024494441695,
+                  "calibration_slope": 0.24368486528871852,
+                  "ccc": 0.05938267274291096,
+                  "mae": 0.2513530272626849,
+                  "n": 1813,
+                  "pearson": 0.09176543323215769,
+                  "rmse": 0.3342993548531609,
+                  "spearman": 0.10437950350069569
+                },
+                "valence": {
+                  "calibration_intercept": 0.19252108036301205,
+                  "calibration_slope": 0.9073059331130655,
+                  "ccc": 0.18115565592895655,
+                  "mae": 0.3480499783575195,
+                  "n": 1813,
+                  "pearson": 0.3066505288265456,
+                  "rmse": 0.47642498132874034,
+                  "spearman": 0.3150809206662267
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.3933445693010542,
+                  "calibration_slope": 0.539305449897885,
+                  "ccc": 0.12930317150206963,
+                  "mae": 0.2561518267291213,
+                  "n": 1812,
+                  "pearson": 0.19956950931422546,
+                  "rmse": 0.3387232375766048,
+                  "spearman": 0.1834991847910907
+                },
+                "valence": {
+                  "calibration_intercept": 0.5556589725835087,
+                  "calibration_slope": 0.8219981979480527,
+                  "ccc": 0.2918126749852041,
+                  "mae": 0.26620969376455633,
+                  "n": 1812,
+                  "pearson": 0.3826204132127083,
+                  "rmse": 0.36523968763257547,
+                  "spearman": 0.34908110718714364
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.4459492486371421,
+                  "calibration_slope": 0.5251790675400987,
+                  "ccc": 0.15030899378391588,
+                  "mae": 0.25035875730427165,
+                  "n": 1812,
+                  "pearson": 0.21466058242026656,
+                  "rmse": 0.32509893238494164,
+                  "spearman": 0.1942674040205256
+                },
+                "valence": {
+                  "calibration_intercept": 0.5417370405586988,
+                  "calibration_slope": 0.8059245487905539,
+                  "ccc": 0.27475464452669696,
+                  "mae": 0.2901065924371189,
+                  "n": 1812,
+                  "pearson": 0.3666574110290608,
+                  "rmse": 0.39559429860785145,
+                  "spearman": 0.3516244212235216
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.183160049779922,
+                  "calibration_slope": 0.6083899962384619,
+                  "ccc": 0.14276988940165278,
+                  "mae": 0.25705303734021445,
+                  "n": 1812,
+                  "pearson": 0.22204530172402276,
+                  "rmse": 0.3392528969630973,
+                  "spearman": 0.17604700136449092
+                },
+                "valence": {
+                  "calibration_intercept": 0.46203207640854776,
+                  "calibration_slope": 0.854653241908971,
+                  "ccc": 0.29649905292355605,
+                  "mae": 0.2635715316270206,
+                  "n": 1812,
+                  "pearson": 0.39246000980889284,
+                  "rmse": 0.36945029692864206,
+                  "spearman": 0.3311911756439669
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.36927942745036607
+        },
+        {
+          "alpha": 10.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": 1.31985925580525,
+                  "calibration_slope": 0.5796984089043873,
+                  "ccc": 0.022687738235586678,
+                  "mae": 0.23716662577655673,
+                  "n": 1813,
+                  "pearson": 0.08265987240858867,
+                  "rmse": 0.32196512331861193,
+                  "spearman": 0.07168898896264898
+                },
+                "valence": {
+                  "calibration_intercept": -2.745812256042288,
+                  "calibration_slope": 1.8848890694061313,
+                  "ccc": 0.06343097145385292,
+                  "mae": 0.34838045518041344,
+                  "n": 1813,
+                  "pearson": 0.25066941019564265,
+                  "rmse": 0.48834934664558544,
+                  "spearman": 0.28437938303828797
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.8225088816907722,
+                  "calibration_slope": 1.588219784065631,
+                  "ccc": 0.06594152800979775,
+                  "mae": 0.24781379675943416,
+                  "n": 1812,
+                  "pearson": 0.2315225751187299,
+                  "rmse": 0.33211224338666506,
+                  "spearman": 0.22051513462175462
+                },
+                "valence": {
+                  "calibration_intercept": -2.3573464280090586,
+                  "calibration_slope": 1.8044072174062677,
+                  "ccc": 0.1371791565755417,
+                  "mae": 0.26049525865088335,
+                  "n": 1812,
+                  "pearson": 0.3600373659046188,
+                  "rmse": 0.37343911725155987,
+                  "spearman": 0.3497719599363815
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -1.292058553135488,
+                  "calibration_slope": 1.4205475292630425,
+                  "ccc": 0.06614054793025108,
+                  "mae": 0.24093503197648752,
+                  "n": 1812,
+                  "pearson": 0.21934740887151175,
+                  "rmse": 0.31922022989684734,
+                  "spearman": 0.18999912258113127
+                },
+                "valence": {
+                  "calibration_intercept": -2.082479149249946,
+                  "calibration_slope": 1.6835031724277216,
+                  "ccc": 0.12016992637431648,
+                  "mae": 0.286077306126335,
+                  "n": 1812,
+                  "pearson": 0.32556347290170257,
+                  "rmse": 0.4047594514176044,
+                  "spearman": 0.30719227945527416
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -2.124579093145065,
+                  "calibration_slope": 1.6884149965578308,
+                  "ccc": 0.06284463495480867,
+                  "mae": 0.25147849800627303,
+                  "n": 1812,
+                  "pearson": 0.23277872339240863,
+                  "rmse": 0.33644802799626755,
+                  "spearman": 0.19680551627997125
+                },
+                "valence": {
+                  "calibration_intercept": -2.89683411568332,
+                  "calibration_slope": 1.9921211865133777,
+                  "ccc": 0.131582710378343,
+                  "mae": 0.2580395173344075,
+                  "n": 1812,
+                  "pearson": 0.37081779738119147,
+                  "rmse": 0.3813312554799016,
+                  "spearman": 0.3303210517329636
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.3710032875119397
+        },
+        {
+          "alpha": 100.0,
+          "inner_folds": [
+            {
+              "holdout_group_count": 25,
+              "holdout_item_count": 1813,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -4.752297893257321,
+                  "calibration_slope": 2.570212565055072,
+                  "ccc": 0.0040104493596868525,
+                  "mae": 0.2392845477263567,
+                  "n": 1813,
+                  "pearson": 0.07219295847676177,
+                  "rmse": 0.3206529736164946,
+                  "spearman": 0.05264563918765947
+                },
+                "valence": {
+                  "calibration_intercept": -23.210679571307075,
+                  "calibration_slope": 8.733278271476852,
+                  "ccc": 0.009831668791700221,
+                  "mae": 0.35039382178814665,
+                  "n": 1813,
+                  "pearson": 0.20995977103720737,
+                  "rmse": 0.4962965916650808,
+                  "spearman": 0.24972402896901086
+                }
+              },
+              "inner_fold": 0,
+              "training_group_count": 83,
+              "training_item_count": 5436
+            },
+            {
+              "holdout_group_count": 27,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -19.2846025692876,
+                  "calibration_slope": 7.297094271549515,
+                  "ccc": 0.01253160320961709,
+                  "mae": 0.25279890090975066,
+                  "n": 1812,
+                  "pearson": 0.2139744077563863,
+                  "rmse": 0.3377415200092571,
+                  "spearman": 0.21047742930090643
+                },
+                "valence": {
+                  "calibration_intercept": -20.48194763509995,
+                  "calibration_slope": 7.934983534878946,
+                  "ccc": 0.02335802826813277,
+                  "mae": 0.2715163364072408,
+                  "n": 1812,
+                  "pearson": 0.30681641129198944,
+                  "rmse": 0.39127169644093135,
+                  "spearman": 0.31408380425395377
+                }
+              },
+              "inner_fold": 1,
+              "training_group_count": 81,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -14.359830650360175,
+                  "calibration_slope": 5.6919848573225105,
+                  "ccc": 0.011315273986980236,
+                  "mae": 0.2462119219203225,
+                  "n": 1812,
+                  "pearson": 0.17957912920750133,
+                  "rmse": 0.324787484354822,
+                  "spearman": 0.1583739671882312
+                },
+                "valence": {
+                  "calibration_intercept": -17.78584497159462,
+                  "calibration_slope": 6.954398332836427,
+                  "ccc": 0.019587090108582433,
+                  "mae": 0.2896406021683715,
+                  "n": 1812,
+                  "pearson": 0.2623115578357857,
+                  "rmse": 0.41954059256854986,
+                  "spearman": 0.24165774882249244
+                }
+              },
+              "inner_fold": 2,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            },
+            {
+              "holdout_group_count": 28,
+              "holdout_item_count": 1812,
+              "holdout_metrics": {
+                "arousal": {
+                  "calibration_intercept": -22.23068143223431,
+                  "calibration_slope": 8.254791950290537,
+                  "ccc": 0.011633254719076754,
+                  "mae": 0.256277977323506,
+                  "n": 1812,
+                  "pearson": 0.21945333030441944,
+                  "rmse": 0.34240505294283746,
+                  "spearman": 0.19251973208362413
+                },
+                "valence": {
+                  "calibration_intercept": -24.10003875096293,
+                  "calibration_slope": 9.172187939238041,
+                  "ccc": 0.02191772528266906,
+                  "mae": 0.2699262314751137,
+                  "n": 1812,
+                  "pearson": 0.3207970321258089,
+                  "rmse": 0.39977784049612597,
+                  "spearman": 0.2940760813279503
+                }
+              },
+              "inner_fold": 3,
+              "training_group_count": 80,
+              "training_item_count": 5437
+            }
+          ],
+          "mean_valence_arousal_rmse": 0.38012852460095203
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection_used_outer_holdout_metrics": false
+}

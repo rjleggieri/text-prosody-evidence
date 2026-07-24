@@ -4,7 +4,7 @@
 |---|---|---|
 | Implementation | Unit, adversarial, static-quality, and clean-install checks | The documented code paths behave as tested. |
 | Synthetic pipeline | Deterministic paired synthetic fixture and end-to-end CLI | Software-contract verification only. |
-| Text component | Bounded historical EmoBank v1.4 reader-perspective evaluation | Limited evidence about those text estimators under that split and grouping limitation. |
+| Text component | Bounded historical EmoBank test evaluation plus a reproducible source-grouped train/development demonstration | Limited evidence about the demonstrated text estimators on EmoBank v1.4; no audio or difference-score implication. |
 | Audio component | Local runtime smoke verification of a pinned estimator | The adapter can execute and returns shaped finite output; no human-reference validity claim. |
 | Benchmark availability | Time-boxed audits found no executable paired dimensional benchmark | Required paired validation is unavailable, not replaced. |
 | Cross-modal index | No paired human validation and no demonstrated common empirical scale | No real-data discrepancy index is scientifically validated or frozen. |
@@ -15,7 +15,8 @@
 - It provides a reference implementation for evidence-aware component evaluation.
 - It demonstrates leakage, calibration, reliability, bootstrap, and provenance contracts
   synthetically.
-- It reports bounded text-component evidence and an explicit audio-validation limitation.
+- It reports bounded text-component evidence, including an aggregate source-grouped public
+  demonstration, and an explicit audio-validation limitation.
 - It calls any future operational output a model-based text–speech affect discrepancy index.
 
 ## Claims the project may not make

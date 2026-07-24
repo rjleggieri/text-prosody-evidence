@@ -19,6 +19,17 @@ REQUIRED_PUBLIC_EVIDENCE = {
     "model_hashes",
 }
 
+REQUIRED_PUBLIC_COMPONENT_DEMO_EVIDENCE = {
+    "component_results",
+    "split_manifest",
+    "development_histories",
+    "human_reference_contract",
+    "configuration_hashes",
+    "environment_lock",
+    "model_specification_hashes",
+    "run_provenance",
+}
+
 
 class EvidenceBundleError(RuntimeError):
     """A required evidence artifact is absent, unsafe, or hash-inconsistent."""
@@ -33,18 +44,22 @@ def _safe_relative_path(value: str) -> PurePosixPath:
     return path
 
 
-def validate_public_evidence_bundle(
+def _validate_evidence_bundle(
     root: str | Path,
     artifacts: Mapping[str, Mapping[str, Any]],
+    required_roles: set[str],
 ) -> dict[str, str]:
     """Validate declared files only; never fabricate, regenerate, or repair evidence."""
-    missing_roles = sorted(REQUIRED_PUBLIC_EVIDENCE - set(artifacts))
+    missing_roles = sorted(required_roles - set(artifacts))
     if missing_roles:
         raise EvidenceBundleError(f"Evidence bundle is missing required roles: {missing_roles}")
+    unexpected_roles = sorted(set(artifacts) - required_roles)
+    if unexpected_roles:
+        raise EvidenceBundleError(f"Evidence bundle has unexpected roles: {unexpected_roles}")
     base = Path(root).resolve()
     verified: dict[str, str] = {}
     seen_paths: set[str] = set()
-    for role in sorted(REQUIRED_PUBLIC_EVIDENCE):
+    for role in sorted(required_roles):
         record = artifacts[role]
         relative = _safe_relative_path(str(record.get("path", "")))
         expected = str(record.get("sha256", "")).lower()
@@ -67,3 +82,23 @@ def validate_public_evidence_bundle(
             raise EvidenceBundleError(f"Evidence artifact hash mismatch for role: {role}")
         verified[role] = observed
     return verified
+
+
+def validate_public_evidence_bundle(
+    root: str | Path,
+    artifacts: Mapping[str, Mapping[str, Any]],
+) -> dict[str, str]:
+    """Validate the complete external-benchmark evidence profile."""
+    return _validate_evidence_bundle(root, artifacts, REQUIRED_PUBLIC_EVIDENCE)
+
+
+def validate_public_component_demo_bundle(
+    root: str | Path,
+    artifacts: Mapping[str, Mapping[str, Any]],
+) -> dict[str, str]:
+    """Validate the aggregate-only public component-demonstration profile."""
+    return _validate_evidence_bundle(
+        root,
+        artifacts,
+        REQUIRED_PUBLIC_COMPONENT_DEMO_EVIDENCE,
+    )

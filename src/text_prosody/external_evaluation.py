@@ -395,9 +395,11 @@ def paired_group_bootstrap_model_comparison(
         raise ValueError(f"Paired comparison is missing columns: {missing}")
     if replicates < 100:
         raise ValueError("Use at least 100 paired source-group bootstrap replicates.")
-    groups = predictions[group_column].drop_duplicates().to_numpy()
+    group_values = predictions[group_column].to_numpy()
+    groups = pd.unique(group_values)
     if len(groups) < 2:
         raise ValueError("Paired source-group bootstrap requires at least two groups.")
+    indices_by_group = {group: np.flatnonzero(group_values == group) for group in groups}
 
     metric_names = ("mae", "rmse", "ccc", "pearson", "spearman")
 
@@ -412,10 +414,8 @@ def paired_group_bootstrap_model_comparison(
     rng = np.random.default_rng(seed)
     for _ in range(replicates):
         sampled = rng.choice(groups, size=len(groups), replace=True)
-        sample = pd.concat(
-            [predictions.loc[predictions[group_column].eq(group)] for group in sampled],
-            ignore_index=True,
-        )
+        sampled_indices = np.concatenate([indices_by_group[group] for group in sampled])
+        sample = predictions.iloc[sampled_indices]
         first, second = metric_values(sample)
         for metric in metric_names:
             value = float(first[metric] - second[metric])

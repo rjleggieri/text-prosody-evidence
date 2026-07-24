@@ -19,3 +19,10 @@ The output directory must not already exist. It contains:
 No item-level predictions are persisted. Re-running with the same seed reproduces numerical
 content, apart from filesystem metadata. These outputs verify code contracts only. They are not
 evidence that text and audio model outputs share a valid empirical scale.
+
+## Optional public empirical demonstration
+
+The [grouped EmoBank text-component demonstration](public_text_component_demo.md) is a separate,
+real-data workflow. It requires an explicit public dataset checkout, excludes the published test
+partition, and writes aggregate evidence only. It improves text-component evidence but does not
+validate audio or a cross-modal discrepancy construct.

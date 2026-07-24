@@ -63,9 +63,12 @@ contracts only.
 The historical text-component table uses reader-perspective EmoBank ratings and reports continuous
 metrics including concordance correlation [@lin1989concordance]. Its published split contains
 substantial source-document overlap, so the repository labels that result bounded rather than a
-source-independent generalization estimate. The optional audio smoke configuration references a
-pinned speech-emotion estimator in the family discussed by @wagner2023dawn, but runtime success is
-not treated as human-reference validity.
+source-independent generalization estimate. A separate executable demonstration uses nested
+source-document folds on the published train/development pool, excludes the test partition, and
+publishes an aggregate hash-validated evidence bundle. This improves component evidence for the
+demonstrated text estimators only. The optional audio smoke configuration references a pinned
+speech-emotion estimator in the family discussed by @wagner2023dawn, but runtime success is not
+treated as human-reference validity.
 
 Until paired human evidence is obtained, the only permitted operational term is “model-based
 text–speech affect discrepancy index.” The project does not claim a biomarker, diagnosis, masking,
@@ -78,8 +81,8 @@ The package is released under the MIT License. Core installation supports Python
 no data or model-weight dependency. Optional benchmark dependencies and upstream datasets retain
 their own terms. The public repository began on 2026-07-20 from a sanitized export of prior private
 development; its public issue and release history is intentionally not backdated. Contributions are
-invited for portability testing, documentation, API stabilization, and a license-compatible public
-empirical demonstration that does not expand unsupported claims.
+invited for portability testing, documentation, API stabilization, and scrutiny or reproduction of
+the license-compatible public text-component demonstration without expanding unsupported claims.
 
 # Acknowledgements
 

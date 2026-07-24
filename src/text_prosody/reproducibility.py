@@ -14,7 +14,10 @@ def set_deterministic_seed(seed: int) -> None:
     random.seed(seed)
     np.random.seed(seed)
 
-    import torch
+    try:
+        import torch
+    except ModuleNotFoundError:
+        return
 
     torch.manual_seed(seed)
     torch.use_deterministic_algorithms(True, warn_only=True)
