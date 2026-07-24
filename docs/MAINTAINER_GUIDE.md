@@ -137,7 +137,7 @@ evidence.
 |---|---|---|
 | Implemented software behavior | Code does what a testable contract says it should do. | Related source items are kept in one fold. |
 | Synthetic verification | The implementation succeeds and fails appropriately on invented data with known structure. | The CLI runs grouped calibration and suppresses invalid intervals on synthetic fixtures. |
-| Real empirical evidence | A real human-reference evaluation was actually run and its limitations are reported. | The bounded historical EmoBank text-component results. |
+| Real empirical evidence | A real human-reference evaluation was actually run and its limitations are reported. | The bounded historical and source-grouped EmoBank text-component results. |
 | Proposed future research | A scientifically conditional path that has not been executed in the rebuilt workflow or authorized by this guide. | Reconnecting externally frozen components to a new exploratory DAIC/PHQ analysis. |
 | Abandoned research branch | A documented design that was stopped because its activation condition failed. | Using the exact audited UniC release as the paired dimensional benchmark. |
 
@@ -220,7 +220,7 @@ open. Nothing in this repository predicts or guarantees JOSS submission or accep
 | `external_evaluation` | Runs grouped held-out evaluation, nested candidate selection, feasibility reports, sensitivities, and bootstrap comparisons. | Implemented and tested synthetically. |
 | `reliability` | Computes rater-level reliability/noise-ceiling summaries when raw ratings exist and reports a clear fallback when they do not. | Implemented and tested synthetically. |
 | `discrepancy` | Computes signed valence/arousal differences and L1, L2, or cosine summaries after a scale check. | Arithmetic is implemented; real-data construct validity is absent. |
-| `text_affect` | Defines text-estimator interfaces, EmoBank normalization, and simple text baselines. | Bounded historical EmoBank component evidence exists. |
+| `text_affect` | Defines text-estimator interfaces, EmoBank normalization, and simple text baselines. | Bounded historical and reproducible source-grouped EmoBank component evidence exists. |
 | `audio_affect` | Defines the pinned audio adapter, output ordering, batching, quality flags, and resume ledger. | Runtime verification only. |
 | `component_benchmark` | Supplies continuous metrics, grouped bootstrap guards, split checks, and EmoBank benchmark helpers. | Implemented; historical aggregate results are documented separately. |
 | `metrics` | Computes regression metrics and requires a training-fold mean baseline. | Implemented and tested. |
@@ -340,8 +340,9 @@ cannot prove that text and audio models share a psychologically meaningful scale
 
 There is bounded historical evidence from the EmoBank v1.4 reader-perspective benchmark. The
 documented candidates included a mean baseline, TF-IDF/Ridge, and a pinned RoBERTa regression
-candidate. Aggregate performance is preserved in
-[text_component_evidence.md](text_component_evidence.md).
+candidate. A newer issue-approved demonstration uses nested source-document folds on the published
+train/development pool, excludes the published test partition, and commits only aggregate evidence.
+See [text_component_evidence.md](text_component_evidence.md).
 
 The result is deliberately called bounded because source documents overlap substantially across
 the published train, development, and test splits. The historical evidence bundle also predates the
@@ -426,11 +427,11 @@ if a suitable benchmark becomes available: strict schema checks, connected group
 leakage, nested held-out evaluation, dimension-preserving calibration, reliability interfaces,
 guarded bootstraps, and hashed evidence manifests.
 
-“The text side has bounded historical EmoBank evidence. The audio side has runtime verification
-only. The complete cross-modal pipeline works on deterministic synthetic fixtures, which proves
-software behavior but not scientific validity. There is no validated real-data discrepancy index,
-and the software is not clinical. The contribution is making the evidence requirements and stop
-rules explicit.”
+“The text side has bounded historical and source-grouped EmoBank evidence. The audio side has
+runtime verification only. The complete cross-modal pipeline works on deterministic synthetic
+fixtures, which proves software behavior but not scientific validity. There is no validated
+real-data discrepancy index, and the software is not clinical. The contribution is making the
+evidence requirements and stop rules explicit.”
 
 ## Questions a JOSS reviewer may ask
 
@@ -447,9 +448,9 @@ immutable evidence verification.
 
 ### Where is the real-world validation?
 
-The text component has bounded historical EmoBank evidence. Audio validity and the real cross-modal
-quantity remain unvalidated. The repository states this as a limitation rather than substituting
-synthetic results.
+The text component has bounded historical and reproducible source-grouped EmoBank evidence. Audio
+validity and the real cross-modal quantity remain unvalidated. The repository states this as a
+limitation rather than substituting synthetic results.
 
 ### Did the project ever run DAIC or PHQ analyses?
 

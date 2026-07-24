@@ -14,7 +14,9 @@ evidence manifests.
 
 The current evidence is deliberately asymmetric:
 
-- The **text estimator has bounded EmoBank v1.4 component evidence**.
+- The **text estimator has bounded EmoBank v1.4 component evidence**, including a reproducible
+  source-document-grouped train/development demonstration. The published test partition was not
+  reused for this demonstration.
 - The **audio estimator has runtime verification only**, not independent human-reference validity
   evidence.
 - The **cross-modal pipeline is verified only with deterministic synthetic data**. This is software
@@ -67,6 +69,7 @@ a hash manifest. It never writes item-level predictions. See [quick start](docs/
 - [Statement of need](docs/statement_of_need.md)
 - [Evidence and claim boundaries](docs/evidence_boundaries.md)
 - [Text component evidence](docs/text_component_evidence.md)
+- [Public grouped text-component demonstration](docs/public_text_component_demo.md)
 - [API overview](docs/api.md)
 - [Development setup](docs/development.md)
 - [Roadmap](ROADMAP.md)

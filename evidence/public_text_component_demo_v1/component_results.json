@@ -1,0 +1,627 @@
+{
+  "analysis_pool": "published_train_and_dev_only",
+  "audio_model_used": false,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20260724,
+  "claim_boundary": "Supports source-grouped performance statements about the demonstrated text estimators on the EmoBank v1.4 train/development pool only; does not validate audio, a common text/audio scale, a discrepancy construct, DAIC/PHQ association, internal state, or clinical use.",
+  "cross_modal_discrepancy_computed": false,
+  "daic_or_phq_data_used": false,
+  "dataset": {
+    "audit": {
+      "analysis_exclusions": {
+        "missing_or_empty_text": 1,
+        "missing_or_non_numeric_reader_target": 0,
+        "missing_source_document": 0,
+        "target_outside_declared_scale": 0,
+        "total_unique_rows_excluded": 1
+      },
+      "eligible_item_count": 9061,
+      "excluded_partitions": [
+        "test"
+      ],
+      "grouping": {
+        "blank_count": 0,
+        "field": "meta.tsv:document",
+        "kish_effective_group_count": 25.55895293297624,
+        "largest_group_item_count": 1074,
+        "largest_group_share": 0.11852996358017878
+      },
+      "human_reference_fields": {
+        "annotation_perspective": "reader",
+        "arousal": "reader.csv:A",
+        "release_values_are_aggregates": true,
+        "valence": "reader.csv:V"
+      },
+      "included_partitions": [
+        "dev",
+        "train"
+      ],
+      "monolithic_source_file_limitation": "Official release tables contain all partitions; the loader filters to train/dev before joining text, references, and metadata.",
+      "partition_counts": {
+        "dev": 999,
+        "train": 8062
+      },
+      "partition_source_document_counts": {
+        "dev": 121,
+        "train": 136
+      },
+      "release": "v1.4",
+      "scale": {
+        "maximum": 5.0,
+        "minimum": 1.0,
+        "name": "modified_SAM"
+      },
+      "source_document_count": 136,
+      "status": "PUBLIC_TEXT_COMPONENT_DEMONSTRATION",
+      "test_partition_used_for_modeling_or_evaluation": false
+    },
+    "id": "JULIELab/EmoBank",
+    "license": "CC-BY-SA-4.0",
+    "release": "v1.4",
+    "repository_revision": "3ca77cf71f83a16ff828dce7549ed36951e7f6d7"
+  },
+  "held_out_prediction_count": 9061,
+  "held_out_predictions_per_item": 1,
+  "inner_folds": 4,
+  "item_count": 9061,
+  "metrics": {
+    "nested_tfidf_ridge": {
+      "point_estimates": {
+        "arousal": {
+          "calibration_intercept": 1.4883603549156752,
+          "calibration_slope": 0.5126376430006564,
+          "ccc": 0.14059418997158,
+          "mae": 0.25079543400164545,
+          "n": 9061,
+          "pearson": 0.2043635122944315,
+          "rmse": 0.3298893062201697,
+          "spearman": 0.18365835293827143
+        },
+        "valence": {
+          "calibration_intercept": 0.29885194029439627,
+          "calibration_slope": 0.8955175142322248,
+          "ccc": 0.30293502699093594,
+          "mae": 0.2839161761512679,
+          "n": 9061,
+          "pearson": 0.404241458192268,
+          "rmse": 0.3908387806613965,
+          "spearman": 0.3861962595363714
+        }
+      },
+      "source_group_bootstrap_95ci": {
+        "arousal": {
+          "calibration_intercept": {
+            "attempted_replicates": 2000,
+            "high": 1.8167519047539098,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 1.1722921562901287,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "calibration_slope": {
+            "attempted_replicates": 2000,
+            "high": 0.6147993475377349,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.40857073789770026,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "ccc": {
+            "attempted_replicates": 2000,
+            "high": 0.1709141370687763,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.10942033097678566,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "mae": {
+            "attempted_replicates": 2000,
+            "high": 0.2567082634970096,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.2439544027594395,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "pearson": {
+            "attempted_replicates": 2000,
+            "high": 0.24629239536006353,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.16136902304471734,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "rmse": {
+            "attempted_replicates": 2000,
+            "high": 0.3373539504045762,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.3212487682586063,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "spearman": {
+            "attempted_replicates": 2000,
+            "high": 0.22622929342714473,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.14533208684822102,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          }
+        },
+        "valence": {
+          "calibration_intercept": {
+            "attempted_replicates": 2000,
+            "high": 0.5713924352028255,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.027635569225506446,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "calibration_slope": {
+            "attempted_replicates": 2000,
+            "high": 0.9785029661526112,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.8086908956673429,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "ccc": {
+            "attempted_replicates": 2000,
+            "high": 0.3428269043310445,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.26456591729422957,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "mae": {
+            "attempted_replicates": 2000,
+            "high": 0.31184835010815354,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.2576362143637806,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "pearson": {
+            "attempted_replicates": 2000,
+            "high": 0.4373275600529842,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.37544065913185043,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "rmse": {
+            "attempted_replicates": 2000,
+            "high": 0.4263507389902772,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.35526659136530836,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "spearman": {
+            "attempted_replicates": 2000,
+            "high": 0.41774025406688914,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.3565470641176455,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          }
+        }
+      }
+    },
+    "training_fold_mean": {
+      "point_estimates": {
+        "arousal": {
+          "calibration_intercept": 15.270994849322797,
+          "calibration_slope": -3.9985248853871678,
+          "ccc": -0.0007738186939931457,
+          "mae": 0.2479009979624444,
+          "n": 9061,
+          "pearson": -0.03933467129257483,
+          "rmse": 0.3306957800572107,
+          "spearman": -0.04146433584263759
+        },
+        "valence": {
+          "calibration_intercept": 14.865266696285884,
+          "calibration_slope": -3.999259684722518,
+          "ccc": -0.004534930945224887,
+          "mae": 0.29438457575649674,
+          "n": 9061,
+          "pearson": -0.09525401601873666,
+          "rmse": 0.4275851664883929,
+          "spearman": -0.08272555536628223
+        }
+      },
+      "source_group_bootstrap_95ci": {
+        "arousal": {
+          "calibration_intercept": {
+            "attempted_replicates": 2000,
+            "high": 30.52724806459673,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -18.5197467203277,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "calibration_slope": {
+            "attempted_replicates": 2000,
+            "high": 7.056617780398701,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -8.995533543980306,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "ccc": {
+            "attempted_replicates": 2000,
+            "high": 0.0008133768588595436,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -0.002349615957006617,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "mae": {
+            "attempted_replicates": 2000,
+            "high": 0.2548620587805956,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.24108956657363476,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "pearson": {
+            "attempted_replicates": 2000,
+            "high": 0.05397604302309842,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -0.10153119928478482,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "rmse": {
+            "attempted_replicates": 2000,
+            "high": 0.34040331456425355,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.3214759715196367,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "spearman": {
+            "attempted_replicates": 2000,
+            "high": 0.04720034539303994,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -0.09976788934765699,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          }
+        },
+        "valence": {
+          "calibration_intercept": {
+            "attempted_replicates": 2000,
+            "high": 25.006760144307272,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -0.5296414639796022,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "calibration_slope": {
+            "attempted_replicates": 2000,
+            "high": 1.1836372476130177,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -7.4006020028808175,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "ccc": {
+            "attempted_replicates": 2000,
+            "high": 0.0010350517615348802,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -0.008442312678097004,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "mae": {
+            "attempted_replicates": 2000,
+            "high": 0.3260838323738514,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.2646949040628051,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "pearson": {
+            "attempted_replicates": 2000,
+            "high": 0.026057349311795246,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -0.17656169511250294,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "rmse": {
+            "attempted_replicates": 2000,
+            "high": 0.4646082447093218,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": 0.39043704669068374,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          },
+          "spearman": {
+            "attempted_replicates": 2000,
+            "high": 0.023705996083888594,
+            "interval_available": true,
+            "invalid_counts_by_reason": {},
+            "invalid_replicates": 0,
+            "low": -0.16652025901791098,
+            "minimum_valid_fraction": 0.9,
+            "minimum_valid_replicates": 1800,
+            "valid_replicates": 2000
+          }
+        }
+      }
+    }
+  },
+  "out_of_range_diagnostics": [
+    {
+      "count": 0,
+      "dimension": "valence",
+      "direction": "below_declared_minimum",
+      "model": "training_fold_mean",
+      "rate": 0.0
+    },
+    {
+      "count": 0,
+      "dimension": "valence",
+      "direction": "above_declared_maximum",
+      "model": "training_fold_mean",
+      "rate": 0.0
+    },
+    {
+      "count": 0,
+      "dimension": "arousal",
+      "direction": "below_declared_minimum",
+      "model": "training_fold_mean",
+      "rate": 0.0
+    },
+    {
+      "count": 0,
+      "dimension": "arousal",
+      "direction": "above_declared_maximum",
+      "model": "training_fold_mean",
+      "rate": 0.0
+    },
+    {
+      "count": 0,
+      "dimension": "valence",
+      "direction": "below_declared_minimum",
+      "model": "nested_tfidf_ridge",
+      "rate": 0.0
+    },
+    {
+      "count": 0,
+      "dimension": "valence",
+      "direction": "above_declared_maximum",
+      "model": "nested_tfidf_ridge",
+      "rate": 0.0
+    },
+    {
+      "count": 0,
+      "dimension": "arousal",
+      "direction": "below_declared_minimum",
+      "model": "nested_tfidf_ridge",
+      "rate": 0.0
+    },
+    {
+      "count": 0,
+      "dimension": "arousal",
+      "direction": "above_declared_maximum",
+      "model": "nested_tfidf_ridge",
+      "rate": 0.0
+    }
+  ],
+  "outer_folds": 5,
+  "paired_ridge_minus_mean_comparison": {
+    "arousal": {
+      "ccc": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": 0.14136800866557314,
+        "difference_lower_95": 0.11137560852562857,
+        "difference_upper_95": 0.17063636126671333,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "mae": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": 0.0028944360392010315,
+        "difference_lower_95": -0.0012348188325250642,
+        "difference_upper_95": 0.006354270063403971,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "pearson": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": 0.24369818358700635,
+        "difference_lower_95": 0.16780388299658333,
+        "difference_upper_95": 0.29043887070295865,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "rmse": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": -0.0008064738370409663,
+        "difference_lower_95": -0.006151451135844828,
+        "difference_upper_95": 0.004433512599755749,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "spearman": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": 0.22512268878090902,
+        "difference_lower_95": 0.14843377781769512,
+        "difference_upper_95": 0.2792105530955769,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      }
+    },
+    "valence": {
+      "ccc": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": 0.30746995793616083,
+        "difference_lower_95": 0.27164599487719066,
+        "difference_upper_95": 0.34470253391053857,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "mae": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": -0.010468399605228829,
+        "difference_lower_95": -0.01773063497012358,
+        "difference_upper_95": -0.0028951207318950773,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "pearson": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": 0.49949547421100465,
+        "difference_lower_95": 0.38660534507567956,
+        "difference_upper_95": 0.5781507801655603,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "rmse": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": -0.03674638582699641,
+        "difference_lower_95": -0.04438447664805091,
+        "difference_upper_95": -0.030065945586146392,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      },
+      "spearman": {
+        "attempted_replicates": 2000,
+        "difference_first_minus_second": 0.4689218149026536,
+        "difference_lower_95": 0.3619224923917291,
+        "difference_upper_95": 0.556201159863881,
+        "interval_available": true,
+        "invalid_counts_by_reason": {},
+        "invalid_replicates": 0,
+        "minimum_valid_fraction": 0.9,
+        "minimum_valid_replicates": 1800,
+        "valid_replicates": 2000
+      }
+    }
+  },
+  "schema_version": 1,
+  "scientific_scope": "EmoBank text-component evidence only",
+  "source_document_count": 136,
+  "status": "PUBLIC_TEXT_COMPONENT_DEMONSTRATION",
+  "test_partition_evaluated": false
+}

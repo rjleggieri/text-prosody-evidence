@@ -1,0 +1,47 @@
+{
+  "annotation_perspective": "reader",
+  "dataset_id": "JULIELab/EmoBank",
+  "dataset_release": "v1.4",
+  "grouping": {
+    "available_field": "meta.tsv:document",
+    "generalization_unit": "source_document",
+    "speaker_creator_duplicate_fields_available": false
+  },
+  "human_reference_fields": {
+    "arousal": "reader.csv:A",
+    "valence": "reader.csv:V"
+  },
+  "license": "CC-BY-SA-4.0",
+  "published_annotation_design": {
+    "aggregation": "Mean of remaining valid ratings after the published removal rule; at least two remaining judgments required.",
+    "dimensions": [
+      "valence",
+      "arousal",
+      "dominance"
+    ],
+    "ratings_per_sentence_before_filtering": 5,
+    "separate_perspectives": [
+      "writer",
+      "reader"
+    ]
+  },
+  "published_reader_reliability": {
+    "arousal_mae": 0.441,
+    "arousal_pearson_r": 0.595,
+    "metric": "mean per-rater agreement with aggregate reference",
+    "not_recomputed_from_release_aggregates": true,
+    "source": "Buechel and Hahn (2017), EACL, Table 2",
+    "valence_mae": 0.349,
+    "valence_pearson_r": 0.738
+  },
+  "rater_level_bootstrap_available": false,
+  "ratings_in_release": "aggregate_only",
+  "reliability_fallback": "The public v1.4 aggregate tables used by this demonstration do not expose raw rater-by-item observations, so ICC, split-half reliability, rater bootstrap, and a run-specific noise ceiling are not estimated.",
+  "repository_revision": "3ca77cf71f83a16ff828dce7549ed36951e7f6d7",
+  "scale": {
+    "maximum": 5.0,
+    "minimum": 1.0,
+    "name": "modified_SAM"
+  },
+  "schema_version": 1
+}

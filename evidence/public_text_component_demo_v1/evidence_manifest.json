@@ -1,0 +1,43 @@
+{
+  "artifacts": {
+    "component_results": {
+      "path": "component_results.json",
+      "sha256": "2e6a4cf0c77be243121a0097f78413f372dfb3ed4ba7922e2214bc2a5d4ef4c2"
+    },
+    "configuration_hashes": {
+      "path": "configuration_hashes.json",
+      "sha256": "5d476aaa3a0e076b97afc39c42e860847d2aa23d568eaa892016e8751b9edd7d"
+    },
+    "development_histories": {
+      "path": "development_histories.json",
+      "sha256": "8b63be1f788defb538ed4855369e9a9fef7d2f94c0ab2f2762c5867814531774"
+    },
+    "environment_lock": {
+      "path": "environment_lock.txt",
+      "sha256": "8e36a6efc65702a743523682c8cc0a71902ddb6aabb16dc581f5e031454c39f7"
+    },
+    "human_reference_contract": {
+      "path": "human_reference_contract.json",
+      "sha256": "7ce09edc97f35dd377ad0c64252ffc76d7ca1ed58876f40837d322bc986fe5b6"
+    },
+    "model_specification_hashes": {
+      "path": "model_specification_hashes.json",
+      "sha256": "87a4032b3e47ab70b0daeffba52c4316dac30219c0536325156c7d97ad0d5669"
+    },
+    "run_provenance": {
+      "path": "run_provenance.json",
+      "sha256": "cb7c35d8498c0a0f8e9368dcc5461d9a55605c7506b1e00a5e64c3411ebba8f5"
+    },
+    "split_manifest": {
+      "path": "split_manifest.json",
+      "sha256": "59e9907616fd115d7a96b2800bc5d4ed48142d619d465c950e04fbaa49476804"
+    }
+  },
+  "profile": "aggregate_public_component_demonstration",
+  "schema_version": 1,
+  "validation": {
+    "status": "VALID",
+    "validator": "text_prosody.evidence_bundle.validate_public_component_demo_bundle",
+    "verified_role_count": 8
+  }
+}

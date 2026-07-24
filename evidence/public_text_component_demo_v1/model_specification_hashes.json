@@ -1,0 +1,7 @@
+{
+  "note": "These are hashes of locked estimator specifications, not model-weight hashes.",
+  "schema_version": 1,
+  "tfidf_ridge_candidate_specification_sha256": "f02c0b9bbc91f8438667863aacffcec6fc1582fc88a1850046d53f8d96d97d9c",
+  "trained_model_weights_persisted": false,
+  "training_fold_mean_specification_sha256": "9896671b32936fbd2f848247f2230f57278c43ddc7d1036b87cf99cdb7243669"
+}

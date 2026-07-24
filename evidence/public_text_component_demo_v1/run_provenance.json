@@ -1,0 +1,21 @@
+{
+  "cpu_only": true,
+  "dataset_rows_or_text_persisted": false,
+  "item_predictions_persisted": false,
+  "network_required_during_analysis": false,
+  "package_versions": {
+    "PyYAML": "6.0.3",
+    "joblib": "1.5.3",
+    "numpy": "2.5.1",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.18.0",
+    "text-prosody-evidence": "0.1.0a1"
+  },
+  "peak_memory_measurement_method": "unsupported_on_this_platform",
+  "peak_process_memory_bytes": null,
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "runtime_seconds": 124.70777239999734,
+  "schema_version": 1
+}

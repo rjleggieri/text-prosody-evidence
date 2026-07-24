@@ -34,8 +34,11 @@ and human noise ceilings are unavailable rather than estimating them from model 
 ## Evidence and provenance
 
 `text_prosody.evidence_bundle` verifies a declared artifact set and hashes without fabricating or
-regenerating missing evidence. `text_prosody.test_access` is an append-only, non-overwriting access
-ledger. `text_prosody.provenance` provides canonical JSON and SHA-256 helpers.
+regenerating missing evidence. The complete external-benchmark and aggregate-only public-component
+profiles have separate required roles. `text_prosody.public_demo` loads the permitted EmoBank
+train/development pool and runs the locked nested source-grouped text demonstration without
+persisting predictions. `text_prosody.test_access` is an append-only, non-overwriting access ledger.
+`text_prosody.provenance` provides canonical JSON and SHA-256 helpers.
 `text_prosody.reproducibility` centralizes optional deterministic Torch settings so scripts and
 tests use the same contract.
 

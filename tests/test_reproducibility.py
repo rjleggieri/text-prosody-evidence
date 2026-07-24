@@ -1,5 +1,8 @@
+import random
+import sys
 from pathlib import Path
 
+import numpy as np
 import pytest
 
 from text_prosody.reproducibility import set_deterministic_seed
@@ -15,6 +18,17 @@ def test_torch_seed_and_deterministic_settings_are_reproducible() -> None:
     assert torch.are_deterministic_algorithms_enabled()
     assert torch.backends.cudnn.benchmark is False
     assert torch.backends.cudnn.deterministic is True
+
+
+def test_core_seed_is_reproducible_when_optional_torch_is_absent(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setitem(sys.modules, "torch", None)
+    set_deterministic_seed(17)
+    first = (random.random(), float(np.random.random()))
+    set_deterministic_seed(17)
+    second = (random.random(), float(np.random.random()))
+    assert first == second
 
 
 def test_environment_and_code_license_are_explicitly_pinned() -> None:

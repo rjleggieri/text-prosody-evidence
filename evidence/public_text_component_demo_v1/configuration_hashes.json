@@ -1,0 +1,15 @@
+{
+  "canonical_config_sha256": "12ed24884b0da0feece11c2a6877173e6dc0c6d7f816fa1e51c7c99855d528f4",
+  "config_path": "configs/public_text_component_demo_v1.yaml",
+  "config_sha256": "eaa9e6f5370c9f574dae0e6100e92d7ca73adbd71de18102045c1acc9670251c",
+  "schema_version": 1,
+  "source_code_normalized_lf_sha256": {
+    "scripts/run_public_text_component_demo.py": "c0111dd98c3e5de00670312cd4d57c8aa3ea7d0e77000610791533c37f9a31e9",
+    "src/text_prosody/component_benchmark.py": "c9de650d177ceb1faa08c941de44b662c19dba133edad0c109e45d78902ceeca",
+    "src/text_prosody/evidence_bundle.py": "4e94cb945862da43875c26a4682498bb17924b802ea3494786f02ec55292c5d5",
+    "src/text_prosody/external_evaluation.py": "59edceb18e3facabcfb7f96ca703c259ed927125f69c41c00251ccdb409f247d",
+    "src/text_prosody/public_demo.py": "86ef857f6f0c00a0474a64e8639607afc99b3c3a82ef13655c354146ad8b4baf",
+    "src/text_prosody/reproducibility.py": "89f9e550cee212a1dde3244d62ae750f0003c112a38973ec68d4ceade4df2b02",
+    "src/text_prosody/text_affect.py": "0881946f8f88a473a717af1ce0a65de33fdd43eaf3bda7d837460cc899caef31"
+  }
+}

@@ -1,5 +1,19 @@
 # Bounded text-component evidence
 
+## Reproducible grouped public demonstration
+
+The project now includes an issue-approved, executable evaluation on the EmoBank v1.4 published
+train/development pool. It uses nested source-document folds, never evaluates the published test
+partition, persists only aggregate artifacts, and validates an eight-role evidence bundle. The
+result improves evidence about the demonstrated text estimators while remaining bounded to
+EmoBank's reader perspective and available source metadata.
+
+See the [complete design, results, reliability record, compute needs, reproduction commands, and
+claim boundary](public_text_component_demo.md). The machine-readable aggregate bundle is under
+[`evidence/public_text_component_demo_v1`](../evidence/public_text_component_demo_v1/evidence_manifest.json).
+
+## Quarantined historical evaluation
+
 This page preserves an aggregate historical evaluation table without regenerating missing evidence
 or redistributing source rows, identifiers, text, or predictions.
 

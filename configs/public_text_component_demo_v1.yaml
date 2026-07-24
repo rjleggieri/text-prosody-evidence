@@ -1,0 +1,42 @@
+schema_version: 1
+status: LOCKED_ISSUE_APPROVED
+approved_issue: https://github.com/rjleggieri/text-prosody-evidence/issues/5
+approved_design_comment: https://github.com/rjleggieri/text-prosody-evidence/issues/5#issuecomment-5069349570
+
+dataset:
+  id: JULIELab/EmoBank
+  release: v1.4
+  repository: https://github.com/JULIELab/EmoBank
+  repository_revision: 3ca77cf71f83a16ff828dce7549ed36951e7f6d7
+  license: CC-BY-SA-4.0
+  annotation_perspective: reader
+  human_reference_fields:
+    valence: reader.csv:V
+    arousal: reader.csv:A
+  scale:
+    name: modified_SAM
+    minimum: 1.0
+    maximum: 5.0
+  included_partitions: [train, dev]
+  prohibited_partition: test
+  grouping_field: meta.tsv:document
+
+evaluation:
+  outer_group_folds: 5
+  inner_group_folds: 4
+  selection_objective: mean_valence_arousal_rmse
+  selection_tie_break: listed_alpha_order
+  alpha_candidates: [1.0, 10.0, 100.0]
+  max_tfidf_features: 20000
+  bootstrap_replicates: 2000
+  bootstrap_seed: 20260724
+  minimum_valid_bootstrap_fraction: 0.90
+  persist_item_predictions: false
+
+claim_boundary:
+  component: text_only
+  audio_validity: unsupported
+  common_text_audio_scale: unsupported
+  cross_modal_discrepancy_validity: unsupported
+  daic_or_phq_use: prohibited
+  clinical_use: prohibited
